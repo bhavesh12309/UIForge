@@ -25,4 +25,7 @@ Allow: /contact
 Allow: /privacy
 Allow: /terms
 Allow: /blog
-https://bhavesh12309.github.io/UIForge/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://bhavesh12309.github.io/UIForge/sitemap.xml
