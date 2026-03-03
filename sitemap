@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://bhavesh12309.github.io/UIForge/</loc>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bhavesh12309.github.io/UIForge/gradient-generator</loc>
+  </url>
+  
+  <url>
+    <loc>https://bhavesh12309.github.io/UIForge/box-shadow</loc>
+  </url>
+  
+  <url>
+    <loc>https://bhavesh12309.github.io/UIForge/clamp-generator</loc>
+  </url>
+  
+  <url>
+    <loc>https://bhavesh12309.github.io/UIForge/glassmorphism</loc>
+  </url>
+
+  <!-- add more page URLs here -->
+
+</urlset>
