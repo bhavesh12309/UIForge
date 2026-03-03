@@ -25,5 +25,4 @@ Allow: /contact
 Allow: /privacy
 Allow: /terms
 Allow: /blog
-
-Sitemap: https://uiforge.dev/sitemap.xml
+https://bhavesh12309.github.io/UIForge/sitemap.xml
