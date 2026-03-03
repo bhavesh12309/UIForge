@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Tool pages
+Allow: /css-gradient-generator
+Allow: /box-shadow-generator
+Allow: /border-radius-generator
+Allow: /flexbox-playground
+Allow: /css-grid-generator
+Allow: /color-palette-generator
+Allow: /hex-rgb-converter
+Allow: /contrast-checker
+Allow: /timestamp-converter
+Allow: /text-case-converter
+Allow: /css-animation-generator
+Allow: /css-clamp-generator
+Allow: /css-transform-generator
+Allow: /svg-blob-generator
+Allow: /glassmorphism-generator
+Allow: /css-clip-path-generator
+
+# Company pages
+Allow: /about
+Allow: /contact
+Allow: /privacy
+Allow: /terms
+Allow: /blog
+
+Sitemap: https://uiforge.dev/sitemap.xml
