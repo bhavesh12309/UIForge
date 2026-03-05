@@ -666,24 +666,6 @@ body, body * { transition: background-color .3s ease, color .3s ease, border-col
   </div>
 </section>
 
-<script>
-  const themeBtn = document.getElementById('themeBtn');
-  themeBtn.addEventListener('click', () => {
-    const html = document.documentElement;
-    const isLight = html.getAttribute('data-theme') === 'light';
-    html.setAttribute('data-theme', isLight ? 'dark' : 'light');
-    themeBtn.textContent = isLight ? '🌙' : '☀️';
-  });
-
-  document.querySelectorAll('.chip').forEach(chip => {
-    chip.addEventListener('click', () => {
-      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-    });
-  });
-</script>
-</body>
-</html>
 /* ═══════════════════════════════
    GRID SECTION
 ═══════════════════════════════ */
@@ -4011,6 +3993,7 @@ function setupClipDrag(overlay,W,H){
 </body>
 
 </html>
+
 
 
 
