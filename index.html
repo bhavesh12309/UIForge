@@ -5,18 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Primary SEO -->
-<title>UIForge — Free CSS Generator Suite | Gradient, Shadow, Flexbox & 17 Tools</title>
-<meta name="description" content="UIForge is a free CSS generator toolkit with 17 tools — gradients, box shadows, glassmorphism, flexbox, grid, animations, clip-path, color palettes and more. Every output comes in CSS, Tailwind and JS Object format instantly.">
-<meta name="keywords" content="css generator, tailwind css, css tools, gradient generator, box shadow generator, glassmorphism, flexbox playground, css grid builder, css animation, clip-path maker, color palette generator, contrast checker, border radius, css clamp, component library, free css tools, web design tools">
+<title>UIForge — CSS to Tailwind Generator | CSS, Tailwind & React Output | 17 Free Tools</title>
+<meta name="description" content="UIForge is a free CSS generator toolkit with 17 tools — gradient generator, box shadow builder, glassmorphism, flexbox, CSS grid, animations, clip-path, WCAG contrast checker, color palettes and more. Every tool outputs CSS, Tailwind utility classes and React style objects instantly. No signup required.">
+<meta name="keywords" content="css gradient generator online, box shadow generator css, glassmorphism css generator, flexbox generator online, css grid generator, css animation generator, clip path generator css, svg blob generator, border radius generator, css clamp generator, color palette generator, hex to rgb converter, wcag contrast checker, unix timestamp converter, text case converter, css to tailwind converter, react style object generator, copy paste css components, css tools online, free css generator, tailwind css generator, ui component library, css code generator, web developer tools, frontend tools free">
 <meta name="author" content="UIForge">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://uiforge.dev/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://uiforge.dev/">
-<meta property="og:title" content="UIForge — Free CSS Generator Suite | 17 Tools, 3 Output Formats">
-<meta property="og:description" content="Generate CSS, Tailwind and JS Object output from 17 free tools — gradients, shadows, glassmorphism, flexbox, grid, animations, color palettes, component library and more.">
+<meta property="og:title" content="UIForge — CSS & Tailwind Generator | 17 Free Tools, 3 Output Formats">
+<meta property="og:description" content="Free CSS generator with 17 tools — gradient builder, glassmorphism, flexbox, CSS grid, animation, clip-path, WCAG contrast checker, color palette generator and 81-component library. Every tool outputs CSS, Tailwind and React style objects instantly.">
 <meta property="og:image" content="https://uiforge.dev/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -28,7 +29,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://uiforge.dev/">
 <meta name="twitter:title" content="UIForge — Free CSS Generator Suite | 17 Tools">
-<meta name="twitter:description" content="Generate CSS, Tailwind and JS styles from 17 free tools. Gradient, shadow, glassmorphism, grid, animation, component library and more.">
+<meta name="twitter:description" content="Free CSS generator — 17 tools including gradient builder, glassmorphism, flexbox, CSS grid, clip-path, WCAG contrast checker & 81 copy-paste components. CSS, Tailwind and React output. No signup.">
 <meta name="twitter:image" content="https://uiforge.dev/og-image.png">
 <meta name="twitter:image:alt" content="UIForge CSS generator suite">
 <meta name="twitter:creator" content="@uiforge">
@@ -490,6 +491,205 @@ hr.tool-sep{border:none;border-top:1px solid var(--rule);margin:18px 0}
 
 @media(max-width:960px){.edit-grid{grid-template-columns:1fr}.edit-vr{display:none}.ec-a,.ec-b{border-bottom:1.5px solid var(--rule-strong);padding-bottom:22px;margin-bottom:22px}.edit-footer{grid-template-columns:repeat(4,1fr)}.complib-layout{grid-template-columns:1fr}.complib-sidebar{position:static;max-height:none}}
 @media(max-width:600px){.hero-inner{padding:0 16px}.mast-center{font-size:clamp(38px,11vw,72px)}.hb-h1{font-size:clamp(52px,14vw,90px)}.edit-footer{grid-template-columns:repeat(3,1fr)}.mast-left .hide-sm{display:none}}
+
+/* WIDGET CARDS — hover shadow, expand, drag-and-drop */
+.wc{background:var(--surface);border:1.5px solid var(--rule-strong);transition:box-shadow .22s,border-color .22s,transform .18s;cursor:grab;position:relative;overflow:hidden}
+.wc:hover{border-color:var(--accent);box-shadow:0 8px 32px rgba(0,0,0,.35),0 2px 8px rgba(85,88,240,.18);transform:translateY(-2px)}
+.wc.dragging{opacity:.45;box-shadow:0 20px 48px rgba(0,0,0,.5);transform:scale(.97);cursor:grabbing;z-index:50}
+.wc.drag-over{border-color:var(--accent);box-shadow:inset 0 0 0 2px var(--accent)}
+.wc-accent-line{position:absolute;top:0;left:0;right:0;height:2px;background:var(--wc-color,var(--accent));transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.wc:hover .wc-accent-line{transform:scaleX(1)}
+.wc-header{padding:14px 16px 10px;display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.wc-icon{width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:18px;background:rgba(85,88,240,.1);border:1px solid rgba(85,88,240,.2);flex-shrink:0;transition:background .2s}
+.wc:hover .wc-icon{background:rgba(85,88,240,.18)}
+.wc-title-wrap{flex:1;min-width:0}
+.wc-title{font-family:var(--editorial);font-size:14px;font-weight:700;color:var(--text);line-height:1.2;margin-bottom:3px}
+.wc-subtitle{font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text3)}
+.wc-drag-handle{font-size:14px;color:var(--text3);cursor:grab;opacity:0;transition:opacity .15s;padding:2px 4px;line-height:1;flex-shrink:0;user-select:none}
+.wc:hover .wc-drag-handle{opacity:1}
+.wc-drag-handle:active{cursor:grabbing}
+.wc-preview{padding:12px 16px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--bg);min-height:72px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;position:relative}
+.wc-preview::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 13px,var(--ink-faint) 13px,var(--ink-faint) 14px),repeating-linear-gradient(90deg,transparent,transparent 13px,var(--ink-faint) 13px,var(--ink-faint) 14px);pointer-events:none}
+.wc-preview > *{position:relative;z-index:1}
+.wc-footer{padding:10px 16px;display:flex;align-items:center;gap:6px}
+.wc-tag{font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border:1px solid var(--border2);color:var(--text3);background:var(--surface2)}
+.wc-expand-btn{font-family:var(--mono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--rule-strong);color:var(--text3);background:none;cursor:pointer;transition:all .15s;margin-left:auto;display:flex;align-items:center;gap:4px}
+.wc-expand-btn:hover{border-color:var(--accent);color:var(--accent)}
+.wc-expand-btn .arrow{display:inline-block;transition:transform .2s;font-style:normal}
+.wc-details{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;background:var(--surface2);border-top:1px solid transparent}
+.wc-details.open{max-height:300px;border-top-color:var(--rule);padding:14px 16px}
+.wc-details-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.wc-detail-item{display:flex;flex-direction:column;gap:3px}
+.wc-detail-lbl{font-family:var(--mono);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3)}
+.wc-detail-val{font-family:var(--mono);font-size:10px;color:var(--text2)}
+.wc-detail-actions{display:flex;gap:6px;margin-top:10px;padding-top:10px;border-top:1px solid var(--rule)}
+.wc-copy-btn{font-family:var(--mono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border:1.5px solid var(--accent);color:var(--accent);background:transparent;cursor:pointer;transition:all .15s;flex:1;text-align:center}
+.wc-copy-btn:hover{background:var(--accent);color:#fff}
+.wc-action-btn{font-family:var(--mono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border:1px solid var(--rule-strong);color:var(--text3);background:transparent;cursor:pointer;transition:all .15s}
+.wc-action-btn:hover{color:var(--text);border-color:var(--text3)}
+/* drag-and-drop grid */
+.wc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+
+/* ═══ UI BLOCKS TOOL (view-uiblocks) ═══ */
+.uib-layout{display:grid;grid-template-columns:220px 1fr;min-height:calc(100vh - var(--nav-h));background:var(--bg)}
+.uib-sidebar{background:var(--surface);border-right:1.5px solid var(--rule-strong);display:flex;flex-direction:column;position:sticky;top:var(--nav-h);height:calc(100vh - var(--nav-h));overflow-y:auto}
+.uib-sidebar-top{padding:16px 14px 10px;border-bottom:1px solid var(--rule)}
+.uib-search{display:flex;align-items:center;background:var(--bg);border:1.5px solid var(--rule-strong);transition:border-color .15s}
+.uib-search:focus-within{border-color:var(--accent)}
+.uib-search-icon{padding:0 10px;color:var(--text3);font-size:12px;flex-shrink:0}
+.uib-search input{flex:1;background:none;border:none;outline:none;font-family:var(--mono);font-size:10px;color:var(--text);padding:8px 8px 8px 0}
+.uib-search input::placeholder{color:var(--text3)}
+.uib-cats{flex:1;overflow-y:auto;padding:8px 0}
+.uib-cat-group{margin-bottom:2px}
+.uib-cat-btn{width:100%;display:flex;align-items:center;gap:8px;padding:9px 16px;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);cursor:pointer;border:none;background:none;text-align:left;transition:all .15s;border-left:2px solid transparent}
+.uib-cat-btn:hover{color:var(--text2);background:var(--ink-faint)}
+.uib-cat-btn.active{color:var(--accent);background:rgba(85,88,240,.07);border-left-color:var(--accent)}
+.uib-cat-icon{font-size:13px;flex-shrink:0;width:18px;text-align:center}
+.uib-cat-count{font-family:var(--mono);font-size:8px;padding:1px 6px;background:var(--surface2);border:1px solid var(--border2);color:var(--text3);margin-left:auto}
+.uib-cat-btn.active .uib-cat-count{background:rgba(85,88,240,.15);border-color:rgba(85,88,240,.3);color:var(--accent)}
+.uib-sidebar-footer{padding:12px 14px;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:6px}
+.uib-mode-btns{display:flex;gap:4px}
+.uib-mode-btn{flex:1;font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:5px 8px;border:1px solid var(--rule-strong);color:var(--text3);background:none;cursor:pointer;transition:all .15s;text-align:center}
+.uib-mode-btn:hover{border-color:var(--text3);color:var(--text2)}
+.uib-mode-btn.active{border-color:var(--accent);background:rgba(85,88,240,.1);color:var(--accent)}
+
+/* Main content */
+.uib-main{display:flex;flex-direction:column;min-height:0}
+.uib-toolbar{padding:14px 24px;border-bottom:1.5px solid var(--rule-strong);display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--surface)}
+.uib-toolbar-title{font-family:var(--display);font-size:22px;letter-spacing:.04em;color:var(--text);flex-shrink:0}
+.uib-toolbar-title span{color:var(--accent)}
+.uib-toolbar-count{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--rule-strong);color:var(--text3)}
+.uib-toolbar-gap{flex:1}
+.uib-sort-select{font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--bg);border:1px solid var(--rule-strong);color:var(--text2);padding:6px 10px;outline:none;cursor:pointer;appearance:none;padding-right:24px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='%23666'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
+.uib-icon-btn{font-size:14px;padding:6px 10px;border:1px solid var(--rule-strong);color:var(--text3);background:none;cursor:pointer;transition:all .15s;flex-shrink:0}
+.uib-icon-btn:hover{border-color:var(--accent);color:var(--accent)}
+.uib-icon-btn.active{border-color:var(--accent);background:rgba(85,88,240,.1);color:var(--accent)}
+
+/* Component grid */
+.uib-grid{padding:24px;display:grid;gap:20px}
+.uib-grid.view-grid{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+.uib-grid.view-list{grid-template-columns:1fr}
+.uib-grid.view-full{grid-template-columns:1fr}
+
+/* Block card */
+.uib-card{border:1.5px solid var(--rule-strong);background:var(--surface);overflow:hidden;transition:border-color .18s,box-shadow .18s;cursor:pointer}
+.uib-card:hover{border-color:var(--accent);box-shadow:0 6px 28px rgba(0,0,0,.3)}
+.uib-card-preview-wrap{background:var(--bg);position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
+.uib-card-preview-wrap::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 19px,var(--ink-faint) 19px,var(--ink-faint) 20px),repeating-linear-gradient(90deg,transparent,transparent 19px,var(--ink-faint) 19px,var(--ink-faint) 20px);pointer-events:none;z-index:0}
+.uib-card-preview-scale{position:relative;z-index:1;transform-origin:top left;pointer-events:none;transition:transform .3s}
+.uib-card:hover .uib-card-preview-scale{transform:scale(1.02)}
+.uib-card-footer{padding:10px 14px;display:flex;align-items:center;gap:8px}
+.uib-card-name{font-family:var(--editorial);font-size:13px;font-weight:700;color:var(--text);flex:1}
+.uib-card-tag{font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border:1px solid var(--border2);color:var(--text3);background:var(--surface2)}
+.uib-card-actions{display:flex;gap:5px;opacity:0;transition:opacity .15s}
+.uib-card:hover .uib-card-actions{opacity:1}
+.uib-card-action{font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--rule-strong);color:var(--text3);background:none;cursor:pointer;transition:all .12s;white-space:nowrap}
+.uib-card-action:hover,.uib-card-action.primary{border-color:var(--accent);color:var(--accent)}
+.uib-card-action.primary:hover{background:var(--accent);color:#fff}
+.uib-card-fav{font-size:13px;cursor:pointer;transition:transform .15s;flex-shrink:0;opacity:.4;background:none;border:none;padding:0}
+.uib-card-fav:hover,.uib-card-fav.on{opacity:1;transform:scale(1.2)}
+.uib-card-fav.on{filter:sepia(1) saturate(3) hue-rotate(330deg)}
+
+/* Editor modal */
+.uib-editor-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:300;display:none;backdrop-filter:blur(6px)}
+.uib-editor-backdrop.open{display:flex}
+.uib-editor{background:var(--surface);border:1.5px solid var(--rule-strong);width:100%;max-width:1100px;height:90vh;margin:auto;display:flex;flex-direction:column;overflow:hidden;animation:fadeUp .2s both}
+.uib-editor-hd{display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1.5px solid var(--rule-strong);background:var(--surface2);flex-shrink:0}
+.uib-editor-title{font-family:var(--display);font-size:24px;letter-spacing:.04em;color:var(--text);flex:1}
+.uib-editor-title span{color:var(--accent)}
+.uib-editor-hd-actions{display:flex;gap:6px;align-items:center}
+.uib-editor-btn{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border:1px solid var(--rule-strong);color:var(--text3);background:none;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:5px}
+.uib-editor-btn:hover{border-color:var(--text3);color:var(--text)}
+.uib-editor-btn.accent{border-color:var(--accent);color:var(--accent)}
+.uib-editor-btn.accent:hover{background:var(--accent);color:#fff}
+.uib-editor-btn.close-btn:hover{border-color:#f87171;color:#f87171}
+.uib-editor-body{display:grid;grid-template-columns:280px 1fr;flex:1;overflow:hidden}
+.uib-editor-controls{border-right:1.5px solid var(--rule-strong);overflow-y:auto;background:var(--bg)}
+.uib-editor-controls-hd{font-family:var(--mono);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--text3);padding:12px 16px 8px;border-bottom:1px solid var(--rule);background:var(--surface);display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:1}
+.uib-editor-controls-hd::before{content:'';display:block;width:3px;height:10px;background:var(--accent);flex-shrink:0}
+.uib-ctrl-group{padding:14px 16px;border-bottom:1px solid var(--rule)}
+.uib-ctrl-group-label{font-family:var(--mono);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--text3);display:flex;align-items:center;gap:8px;margin-bottom:12px;cursor:pointer}
+.uib-ctrl-group-label::after{content:'▾';margin-left:auto;font-size:10px;transition:transform .2s}
+.uib-ctrl-group.collapsed .uib-ctrl-group-label::after{transform:rotate(-90deg)}
+.uib-ctrl-group.collapsed .uib-ctrl-group-body{display:none}
+.uib-ctrl{margin-bottom:12px}
+.uib-ctrl:last-child{margin-bottom:0}
+.uib-ctrl-label{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.uib-ctrl-val{color:var(--text2);font-weight:700}
+.uib-ctrl input[type=range]{width:100%;accent-color:var(--accent);cursor:pointer}
+.uib-ctrl input[type=color]{width:44px;height:28px;border:1.5px solid var(--rule-strong);background:none;cursor:pointer;padding:2px;border-radius:0}
+.uib-color-row{display:flex;align-items:center;gap:8px}
+.uib-color-row input[type=text]{flex:1;background:var(--bg);border:1.5px solid var(--rule-strong);color:var(--text);padding:5px 8px;font-family:var(--mono);font-size:11px;outline:none;transition:border-color .15s}
+.uib-color-row input[type=text]:focus{border-color:var(--accent)}
+.uib-ctrl select{width:100%;background:var(--bg);border:1.5px solid var(--rule-strong);color:var(--text);padding:7px 10px;font-family:var(--mono);font-size:10px;outline:none;cursor:pointer;appearance:none}
+.uib-ctrl-chips{display:flex;flex-wrap:wrap;gap:5px}
+.uib-chip{font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--border2);color:var(--text3);background:var(--surface2);cursor:pointer;transition:all .12s}
+.uib-chip:hover{border-color:var(--accent);color:var(--accent)}
+.uib-chip.active{border-color:var(--accent);background:rgba(85,88,240,.12);color:var(--accent)}
+.uib-variant-btn{width:100%;font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;border:1px solid var(--rule-strong);color:var(--text3);background:none;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:6px;margin-bottom:5px}
+.uib-variant-btn:hover,.uib-variant-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(85,88,240,.06)}
+.uib-variant-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.uib-reset-btn{width:100%;font-family:var(--mono);font-size:8px;letter-spacing:.14em;text-transform:uppercase;padding:6px;border:1px dashed var(--border2);color:var(--text3);background:none;cursor:pointer;transition:all .15s;margin-top:4px}
+.uib-reset-btn:hover{border-color:#f87171;color:#f87171}
+
+/* Preview pane */
+.uib-editor-preview{display:flex;flex-direction:column;overflow:hidden}
+.uib-preview-toolbar{display:flex;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--rule);background:var(--surface2);flex-shrink:0;flex-wrap:wrap}
+.uib-preview-toolbar-label{font-family:var(--mono);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--text3);display:flex;align-items:center;gap:8px}
+.uib-preview-toolbar-label::before{content:'';display:block;width:3px;height:10px;background:var(--accent2)}
+.uib-vp-btns{display:flex;gap:3px}
+.uib-vp-btn{font-family:var(--mono);font-size:9px;padding:4px 10px;border:1px solid var(--rule-strong);color:var(--text3);background:none;cursor:pointer;transition:all .12s}
+.uib-vp-btn:hover,.uib-vp-btn.active{border-color:var(--accent);color:var(--accent)}
+.uib-preview-frame{flex:1;overflow:auto;background:var(--bg);display:flex;align-items:flex-start;justify-content:center;padding:32px 24px;position:relative}
+.uib-preview-frame::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 23px,var(--ink-faint) 23px,var(--ink-faint) 24px),repeating-linear-gradient(90deg,transparent,transparent 23px,var(--ink-faint) 23px,var(--ink-faint) 24px);pointer-events:none}
+.uib-preview-inner{position:relative;z-index:1;transition:width .3s ease;max-width:100%}
+.uib-preview-inner.vp-mobile{width:375px}
+.uib-preview-inner.vp-tablet{width:768px}
+.uib-preview-inner.vp-desktop{width:100%}
+
+/* Code pane */
+.uib-code-pane{border-top:1.5px solid var(--rule-strong);flex-shrink:0;background:var(--bg)}
+.uib-code-tabs{display:flex;border-bottom:1px solid var(--rule-strong);background:var(--surface)}
+.uib-code-tab{display:flex;align-items:center;gap:6px;padding:9px 16px;font-family:var(--mono);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--text3);cursor:pointer;border-right:1px solid var(--rule);transition:all .12s;position:relative;flex-shrink:0}
+.uib-code-tab::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:transparent;transition:background .15s}
+.uib-code-tab:hover{color:var(--text2);background:var(--ink-faint)}
+.uib-code-tab.active{color:var(--text);background:var(--bg)}
+.uib-code-tab.active::after{background:var(--uib-tab-color,var(--accent))}
+.uib-code-tab[data-tab=html]{--uib-tab-color:var(--fmt-css)}
+.uib-code-tab[data-tab=css]{--uib-tab-color:#f97316}
+.uib-code-tab[data-tab=tailwind]{--uib-tab-color:var(--fmt-tw)}
+.uib-code-tab[data-tab=react]{--uib-tab-color:#61dafb}
+.uib-code-dot{width:7px;height:7px;border-radius:50%;background:var(--uib-tab-color,var(--accent));flex-shrink:0}
+.uib-code-actions{display:flex;gap:5px;align-items:center;margin-left:auto;padding:0 10px}
+.uib-copy-code-btn{font-family:var(--mono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border:1.5px solid var(--accent);color:var(--accent);background:transparent;cursor:pointer;transition:all .15s}
+.uib-copy-code-btn:hover,.uib-copy-code-btn.copied{background:var(--accent);color:#fff}
+.uib-code-body{max-height:160px;overflow-y:auto}
+.uib-code-content{display:none}
+.uib-code-content.active{display:block}
+.uib-code-pre{font-family:var(--mono);font-size:11px;line-height:1.7;padding:14px 16px;white-space:pre-wrap;word-break:break-all}
+.uib-code-pre.html-code{color:#818cf8}
+.uib-code-pre.css-code{color:#fb923c}
+.uib-code-pre.tw-code{color:#22d3ee}
+.uib-code-pre.react-code{color:#61dafb}
+
+/* Challenges panel */
+.uib-challenge-bar{background:linear-gradient(90deg,rgba(85,88,240,.15),rgba(167,139,250,.08));border-bottom:1px solid rgba(85,88,240,.2);padding:10px 24px;display:flex;align-items:center;gap:16px;flex-shrink:0}
+.uib-challenge-pill{font-family:var(--mono);font-size:8px;letter-spacing:.2em;text-transform:uppercase;padding:3px 10px;background:var(--accent);color:#fff;flex-shrink:0}
+.uib-challenge-text{font-family:var(--editorial);font-size:13px;font-weight:700;color:var(--text);flex:1;font-style:italic}
+.uib-challenge-skip{font-family:var(--mono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--rule-strong);color:var(--text3);background:none;cursor:pointer;transition:all .15s;flex-shrink:0}
+.uib-challenge-skip:hover{border-color:var(--accent);color:var(--accent)}
+.uib-challenge-streak{font-family:var(--display);font-size:20px;color:var(--accent2);flex-shrink:0}
+
+/* Random generator */
+.uib-random-btn{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border:1.5px solid var(--accent2);color:var(--accent2);background:none;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:6px;flex-shrink:0}
+.uib-random-btn:hover{background:rgba(167,139,250,.12)}
+
+/* Saved toast */
+.uib-saved-toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--surface);border:1.5px solid var(--accent);color:var(--accent);font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:10px 20px;z-index:999;transition:transform .25s ease;pointer-events:none;display:flex;align-items:center;gap:8px;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+.uib-saved-toast.show{transform:translateX(-50%) translateY(0)}
+
+@media(max-width:900px){.uib-layout{grid-template-columns:1fr}.uib-sidebar{position:static;height:auto;max-height:220px}.uib-editor-body{grid-template-columns:1fr}.uib-editor-controls{border-right:none;border-bottom:1.5px solid var(--rule-strong);max-height:200px}.uib-grid.view-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -648,7 +848,7 @@ hr.tool-sep{border:none;border-top:1px solid var(--rule);margin:18px 0}
         <div class="complib-nav-item" role="menuitem" data-sec="badges" onclick="switchSec(this,'badges')">Badges &amp; Labels <span class="nav-badge">6</span></div>
         <div class="complib-nav-item" role="menuitem" data-sec="cards" onclick="switchSec(this,'cards')">Cards <span class="nav-badge">8</span></div>
         <div class="complib-nav-item" role="menuitem" data-sec="inputs" onclick="switchSec(this,'inputs')">Inputs &amp; Forms <span class="nav-badge">8</span></div>
-        <div class="complib-nav-item" role="menuitem" data-sec="alerts" onclick="switchSec(this,'alerts')">Alerts &amp; Banners <span class="nav-badge">5</span></div>
+        <div class="complib-nav-item" role="menuitem" data-sec="alerts" onclick="switchSec(this,'alerts')">Alerts &amp; Banners <span class="nav-badge">15</span></div>
         <div class="complib-nav-item" role="menuitem" data-sec="toggles" onclick="switchSec(this,'toggles')">Toggles &amp; Progress <span class="nav-badge">4</span></div>
         <div class="complib-nav-item" role="menuitem" data-sec="avatars" onclick="switchSec(this,'avatars')">Avatars <span class="nav-badge">4</span></div>
         <div class="complib-nav-item" role="menuitem" data-sec="navigation" onclick="switchSec(this,'navigation')">Navigation <span class="nav-badge">6</span></div>
@@ -658,13 +858,14 @@ hr.tool-sep{border:none;border-top:1px solid var(--rule);margin:18px 0}
         <div class="complib-nav-item" role="menuitem" data-sec="table" onclick="switchSec(this,'table')">Tables <span class="nav-badge">4</span></div>
         <div class="complib-nav-item" role="menuitem" data-sec="feed" onclick="switchSec(this,'feed')">Feed &amp; Chat <span class="nav-badge">5</span></div>
         <div class="complib-nav-item" role="menuitem" data-sec="marketing" onclick="switchSec(this,'marketing')">Marketing <span class="nav-badge">5</span></div>
+        <div class="complib-nav-item" role="menuitem" data-sec="widgetcards" onclick="switchSec(this,'widgetcards')">Widget Cards <span class="nav-badge" style="background:rgba(85,88,240,.15);border-color:rgba(85,88,240,.3);color:var(--accent)">20 ★</span></div>
       </nav>
       <div class="complib-main">
         <div class="complib-section active" id="sec-buttons"><div class="complib-section-hd"><h2 class="complib-section-title">BUT<span>TONS</span></h2><p class="complib-section-desc">8 variants — primary, secondary, ghost, danger, sizes, icon, group</div></p><div class="comp-grid" id="grid-buttons"></div></div>
         <div class="complib-section" id="sec-badges"><div class="complib-section-hd"><h2 class="complib-section-title">BADGES <span>&amp; LABELS</span></h2><p class="complib-section-desc">Status indicators and notification labels</div></p><div class="comp-grid" id="grid-badges"></div></div>
         <div class="complib-section" id="sec-cards"><div class="complib-section-hd"><h2 class="complib-section-title">CARDS</h2><p class="complib-section-desc">8 content containers — basic, image, profile, pricing, horizontal, glass, feature, notification</div></p><div class="comp-grid" id="grid-cards"></div></div>
         <div class="complib-section" id="sec-inputs"><div class="complib-section-hd"><h2 class="complib-section-title">INPUTS <span>&amp; FORMS</span></h2><p class="complib-section-desc">8 form elements — inputs, search, OTP, range, radio group, file upload, form row, pin</div></p><div class="comp-grid" id="grid-inputs"></div></div>
-        <div class="complib-section" id="sec-alerts"><div class="complib-section-hd"><h2 class="complib-section-title">ALERTS <span>&amp; BANNERS</span></h2><p class="complib-section-desc">Info, success, warning, danger</div></p><div class="comp-grid" id="grid-alerts"></div></div>
+        <div class="complib-section" id="sec-alerts"><div class="complib-section-hd"><h2 class="complib-section-title">ALERTS <span>&amp; BANNERS</span></h2><p class="complib-section-desc">15 variants — info, success, warning, danger, dismissible, toast stack, inline validation, cookie bar, status, ribbon, floating, progress, hint, maintenance</div></p><div class="comp-grid" id="grid-alerts"></div></div>
         <div class="complib-section" id="sec-toggles"><div class="complib-section-hd"><h2 class="complib-section-title">TOGGLES <span>&amp; PROGRESS</span></h2><p class="complib-section-desc">Switches, checkboxes, progress bars</div></p><div class="comp-grid" id="grid-toggles"></div></div>
         <div class="complib-section" id="sec-avatars"><div class="complib-section-hd"><h2 class="complib-section-title">AVATARS</h2><p class="complib-section-desc">User avatars with status and groups</div></p><div class="comp-grid" id="grid-avatars"></div></div>
         <div class="complib-section" id="sec-navigation"><div class="complib-section-hd"><h2 class="complib-section-title">NAVI<span>GATION</span></h2><p class="complib-section-desc">6 patterns — tabs, breadcrumb, pill, pagination, sidebar item, stepper</div></p><div class="comp-grid" id="grid-navigation"></div></div>
@@ -673,11 +874,131 @@ hr.tool-sep{border:none;border-top:1px solid var(--rule);margin:18px 0}
         <div class="complib-section" id="sec-modal"><div class="complib-section-hd"><h2 class="complib-section-title">MODALS <span>&amp; OVERLAYS</span></h2><p class="complib-section-desc">Modal dialog, confirm dialog, drawer preview, toast notification</div></p><div class="comp-grid" id="grid-modal"></div></div>
         <div class="complib-section" id="sec-table"><div class="complib-section-hd"><h2 class="complib-section-title">TABLES</h2><p class="complib-section-desc">Basic table, striped, sortable header, with actions</div></p><div class="comp-grid" id="grid-table"></div></div>
         <div class="complib-section" id="sec-feed"><div class="complib-section-hd"><h2 class="complib-section-title">FEED <span>&amp; CHAT</span></h2><p class="complib-section-desc">Activity feed, chat bubble, comment, notification item, user list</div></p><div class="comp-grid" id="grid-feed"></div></div>
+        <div class="complib-section" id="sec-widgetcards"><div class="complib-section-hd"><h2 class="complib-section-title">WIDGET <span>CARDS</span></h2><p class="complib-section-desc">20 interactive cards — hover shadow, expandable details, drag-and-drop reorder. For tools, widgets and saved items.</p></div><div class="wc-grid" id="grid-widgetcards"></div></div>
         <div class="complib-section" id="sec-marketing"><div class="complib-section-hd"><h2 class="complib-section-title">MARKETING</h2><p class="complib-section-desc">Pricing card, feature block, testimonial, CTA, hero badge</div></p><div class="comp-grid" id="grid-marketing"></div></div>
       </div>
     </div>
   </div>
 </div>
+
+
+<!-- ═══ TOOL 18: UI BLOCKS ═══ -->
+<div id="view-uiblocks" class="view tool-view">
+  <div class="tool-header"><div class="tool-header-inner">
+    <nav class="tool-breadcrumb" role="navigation" aria-label="Breadcrumb"><ol style="list-style:none;display:flex;align-items:center;gap:10px;margin:0;padding:0"><li><a href="#" onclick="navTo('home');return false;" style="color:inherit">UIForge</a></li><li aria-hidden="true">→</li><li aria-current="page">UI Blocks</li></ol></nav>
+    <h1 class="tool-title">UI <span>BLOCKS</span></h1>
+    <p class="tool-desc">Tailwind UI-style component library. Live editable previews, multi-code tabs, save &amp; share, variants, random generator, challenges.</p>
+  </div></div>
+
+  <!-- Challenge bar -->
+  <div class="uib-challenge-bar" id="uib-challenge-bar">
+    <div class="uib-challenge-pill">Challenge</div>
+    <div class="uib-challenge-text" id="uib-challenge-text">Build a hero section with a gradient headline and a CTA button</div>
+    <div class="uib-challenge-streak" id="uib-streak" title="Challenge streak">🔥0</div>
+    <button class="uib-challenge-skip" onclick="uibNextChallenge()" aria-label="Next challenge">Next ›</button>
+    <button class="uib-challenge-skip" onclick="uibCompleteChallenge()" aria-label="Complete challenge" style="border-color:var(--accent2);color:var(--accent2)">✓ Done</button>
+  </div>
+
+  <div class="uib-layout">
+    <!-- Sidebar -->
+    <nav class="uib-sidebar" aria-label="UI Blocks categories">
+      <div class="uib-sidebar-top">
+        <div class="uib-search" role="search">
+          <span class="uib-search-icon" aria-hidden="true">⌕</span>
+          <input type="search" placeholder="Search blocks…" id="uibSearch" aria-label="Search UI blocks" oninput="uibFilter()" autocomplete="off">
+        </div>
+      </div>
+      <div class="uib-cats" role="list" id="uibCatList">
+        <!-- populated by JS -->
+      </div>
+      <div class="uib-sidebar-footer">
+        <div class="uib-mode-btns" role="group" aria-label="View mode">
+          <button class="uib-mode-btn active" data-mode="grid" onclick="uibSetMode('grid',this)" aria-pressed="true" title="Grid view">⊞ Grid</button>
+          <button class="uib-mode-btn" data-mode="list" onclick="uibSetMode('list',this)" aria-pressed="false" title="List view">☰ List</button>
+          <button class="uib-mode-btn" data-mode="full" onclick="uibSetMode('full',this)" aria-pressed="false" title="Full width">⤢ Full</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="uib-main">
+      <div class="uib-toolbar">
+        <div class="uib-toolbar-title" id="uibCatTitle">ALL <span>BLOCKS</span></div>
+        <div class="uib-toolbar-count" id="uibCount">0 blocks</div>
+        <div class="uib-toolbar-gap"></div>
+        <button class="uib-random-btn" onclick="uibOpenRandom()" aria-label="Open random block">🎲 Random</button>
+        <select class="uib-sort-select" aria-label="Sort blocks" onchange="uibSort(this.value)">
+          <option value="default">Sort: Default</option>
+          <option value="alpha">A → Z</option>
+          <option value="cat">By Category</option>
+          <option value="saved">Saved First</option>
+        </select>
+        <button class="uib-icon-btn" id="uibFavFilterBtn" onclick="uibToggleFavFilter()" title="Show saved only" aria-pressed="false">♥ Saved</button>
+      </div>
+      <div class="uib-grid view-grid" id="uibGrid" role="list" aria-label="UI blocks"></div>
+    </div>
+  </div>
+</div>
+
+<!-- UI Blocks Editor Modal -->
+<div class="uib-editor-backdrop" id="uibEditor" role="dialog" aria-modal="true" aria-labelledby="uibEditorTitle" onclick="uibCloseEditor(event)">
+  <div class="uib-editor">
+    <div class="uib-editor-hd">
+      <div class="uib-editor-title" id="uibEditorTitle">Block <span>Editor</span></div>
+      <div class="uib-editor-hd-actions">
+        <button class="uib-editor-btn" onclick="uibSaveBlock()" aria-label="Save block">♥ Save</button>
+        <button class="uib-editor-btn" onclick="uibShareBlock()" aria-label="Share block">↗ Share</button>
+        <button class="uib-editor-btn accent" onclick="uibCopyCurrentCode()" aria-label="Copy code">⎘ Copy</button>
+        <button class="uib-editor-btn close-btn" onclick="uibCloseEditor()" aria-label="Close editor">✕</button>
+      </div>
+    </div>
+    <div class="uib-editor-body">
+      <!-- Controls panel -->
+      <div class="uib-editor-controls" id="uibEditorControls">
+        <div class="uib-editor-controls-hd">Customise</div>
+        <div id="uibControlsBody"><!-- populated by JS --></div>
+      </div>
+      <!-- Preview + code -->
+      <div class="uib-editor-preview">
+        <div class="uib-preview-toolbar">
+          <div class="uib-preview-toolbar-label">Live Preview</div>
+          <div class="uib-vp-btns" role="group" aria-label="Viewport size">
+            <button class="uib-vp-btn" onclick="uibSetVP('mobile',this)" aria-pressed="false" title="Mobile 375px">📱</button>
+            <button class="uib-vp-btn" onclick="uibSetVP('tablet',this)" aria-pressed="false" title="Tablet 768px">🖥</button>
+            <button class="uib-vp-btn active" onclick="uibSetVP('desktop',this)" aria-pressed="true" title="Desktop full width">⤢</button>
+          </div>
+          <div class="uib-toolbar-gap"></div>
+          <!-- Variants row -->
+          <div id="uibVariantBtns" style="display:flex;gap:5px;flex-wrap:wrap" role="group" aria-label="Variants"></div>
+        </div>
+        <div class="uib-preview-frame" id="uibPreviewFrame">
+          <div class="uib-preview-inner vp-desktop" id="uibPreviewInner"></div>
+        </div>
+        <!-- Code pane -->
+        <div class="uib-code-pane">
+          <div class="uib-code-tabs" role="tablist">
+            <button class="uib-code-tab active" data-tab="html" role="tab" aria-selected="true" onclick="uibSwitchCodeTab('html',this)"><span class="uib-code-dot"></span>HTML</button>
+            <button class="uib-code-tab" data-tab="css" role="tab" aria-selected="false" onclick="uibSwitchCodeTab('css',this)"><span class="uib-code-dot"></span>CSS</button>
+            <button class="uib-code-tab" data-tab="tailwind" role="tab" aria-selected="false" onclick="uibSwitchCodeTab('tailwind',this)"><span class="uib-code-dot"></span>Tailwind</button>
+            <button class="uib-code-tab" data-tab="react" role="tab" aria-selected="false" onclick="uibSwitchCodeTab('react',this)"><span class="uib-code-dot"></span>React</button>
+            <div class="uib-code-actions">
+              <button class="uib-copy-code-btn" id="uibCopyBtn" onclick="uibCopyCurrentCode()" aria-label="Copy current tab code">Copy</button>
+            </div>
+          </div>
+          <div class="uib-code-body">
+            <div class="uib-code-content active" id="code-html"><pre class="uib-code-pre html-code" id="uibCodeHtml"></pre></div>
+            <div class="uib-code-content" id="code-css"><pre class="uib-code-pre css-code" id="uibCodeCss"></pre></div>
+            <div class="uib-code-content" id="code-tailwind"><pre class="uib-code-pre tw-code" id="uibCodeTailwind"></pre></div>
+            <div class="uib-code-content" id="code-react"><pre class="uib-code-pre react-code" id="uibCodeReact"></pre></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Saved toast -->
+<div class="uib-saved-toast" id="uibSavedToast" aria-live="polite">✓ <span id="uibSavedMsg">Saved!</span></div>
 
 <!-- Modal -->
 <div class="comp-modal-backdrop" id="comp-modal" onclick="closeModal(event)">
@@ -735,10 +1056,76 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
 // ═══════════════════════════════════════════
 // NAVIGATION
 // ═══════════════════════════════════════════
-const VIEWS=['home','gradient','shadow','border','clamp','glass','flexbox','grid','cssanim','transform','clippath','blob','palette','hexrgb','contrast','timestamp','textcase','complib'];
+const VIEWS=['home','gradient','shadow','border','clamp','glass','flexbox','grid','cssanim','transform','clippath','blob','palette','hexrgb','contrast','timestamp','textcase','complib','uiblocks'];
+
+// ═══════════════════════════════════════════
+// PER-TOOL META / SEO
+// ═══════════════════════════════════════════
+const TOOL_META = {
+  home:      { title:'UIForge — CSS to Tailwind Generator | CSS, Tailwind & React Output | 17 Free Tools', desc:'Free CSS generator with 17 tools — gradient, shadow, glassmorphism, flexbox, grid, animation, contrast checker and more. CSS, Tailwind and React output.', url:'https://uiforge.dev/', imgAlt:'UIForge CSS generator suite showing tri-format output panel' },
+  gradient:  { title:'CSS Gradient Generator – Free Online Tool | UIForge', desc:'Build linear, radial and conic CSS gradients with unlimited colour stops. Outputs CSS, Tailwind utility class and React style object. Free, no signup.', url:'https://uiforge.dev/#gradient', imgAlt:'UIForge gradient generator showing a purple to violet gradient with CSS and Tailwind output' },
+  shadow:    { title:'Box Shadow Generator CSS – Free Online Tool | UIForge', desc:'Stack multiple CSS box shadow layers with per-layer colour, blur and spread. Exports CSS, Tailwind utility class and JS object. Free online, no login.', url:'https://uiforge.dev/#shadow', imgAlt:'UIForge box shadow builder with layered shadow controls and live preview' },
+  border:    { title:'Border Radius Generator – Free CSS Tool | UIForge', desc:'Generate uniform, per-corner or elliptical CSS border-radius values visually. Outputs CSS, Tailwind rounded class and React style object. Free online.', url:'https://uiforge.dev/#border', imgAlt:'UIForge border radius tool showing a rounded shape preview with CSS output panel' },
+  clamp:     { title:'CSS Clamp Generator – Fluid Typography Tool | UIForge', desc:'Calculate fluid clamp() values for responsive font sizes. Set min/max sizes and viewports — outputs CSS, Tailwind and JS with a live fluid scale graph.', url:'https://uiforge.dev/#clamp', imgAlt:'UIForge CSS clamp calculator showing fluid type scale graph with CSS output' },
+  glass:     { title:'Glassmorphism CSS Generator – Free Online Tool | UIForge', desc:'Create frosted-glass UI with backdrop-filter, blur, saturation and opacity controls. Outputs CSS with Safari prefix, Tailwind and React style object. Free.', url:'https://uiforge.dev/#glass', imgAlt:'UIForge glassmorphism generator showing a frosted glass card with controls' },
+  flexbox:   { title:'Flexbox Generator Online – CSS Flexbox Playground | UIForge', desc:'Visualise every CSS flexbox property — direction, justify-content, align-items, wrap and gap. Outputs clean CSS, Tailwind classes and React style object.', url:'https://uiforge.dev/#flexbox', imgAlt:'UIForge flexbox playground showing flex items with live alignment controls' },
+  grid:      { title:'CSS Grid Generator – Layout Builder Online | UIForge', desc:'Build CSS grid layouts visually with column, row, gap and template controls. Outputs clean grid CSS, Tailwind grid classes and JS object. Free online.', url:'https://uiforge.dev/#grid', imgAlt:'UIForge CSS grid builder showing a grid layout preview with column controls' },
+  cssanim:   { title:'CSS Animation Generator – Free Keyframe Tool | UIForge', desc:'Generate CSS keyframe animations with 12 presets, custom duration, easing, delay and iteration. Outputs @keyframes CSS, Tailwind and React. Free tool.', url:'https://uiforge.dev/#cssanim', imgAlt:'UIForge CSS animation generator showing animated box with keyframe CSS output' },
+  transform: { title:'CSS Transform Generator – Rotate, Scale & Skew Tool | UIForge', desc:'Build CSS transforms visually — rotateX/Y/Z, scale, translate, skewX and perspective. Live 3D preview. Outputs CSS, Tailwind arbitrary class and JS object.', url:'https://uiforge.dev/#transform', imgAlt:'UIForge CSS transform builder with 3D rotation sliders and live box preview' },
+  clippath:  { title:'Clip-Path Generator CSS – Polygon & Shape Maker | UIForge', desc:'Create CSS clip-path for polygons, circles, ellipses and inset shapes. Includes star, hexagon and arrow presets. Outputs CSS, Tailwind and JS style object.', url:'https://uiforge.dev/#clippath', imgAlt:'UIForge CSS clip-path maker showing a polygon star shape with clip-path output' },
+  blob:      { title:'SVG Blob Generator – Organic CSS Shape Maker | UIForge', desc:'Generate smooth organic SVG blob shapes. Control complexity, wobble, colour and size. Download SVG or copy as CSS background URI. Fill, stroke, gradient.', url:'https://uiforge.dev/#blob', imgAlt:'UIForge SVG blob generator showing a smooth organic indigo blob shape' },
+  palette:   { title:'Color Palette Generator – CSS Colour Scheme Tool | UIForge', desc:'Generate harmonious colour palettes from any base colour. Mono, complementary, triadic, tetradic and more. Outputs CSS variables, Tailwind config and JS.', url:'https://uiforge.dev/#palette', imgAlt:'UIForge colour palette generator showing colour swatches with CSS variable output' },
+  hexrgb:    { title:'HEX to RGB Converter – CSS Colour Converter Online | UIForge', desc:'Convert between HEX, RGB, HSL and OKLCH colour formats instantly. Includes tint scale and preview. Outputs CSS colour, Tailwind arbitrary class and JS.', url:'https://uiforge.dev/#hexrgb', imgAlt:'UIForge HEX to RGB converter showing colour circle swatch and format outputs' },
+  contrast:  { title:'WCAG Contrast Checker – Colour Accessibility Tool | UIForge', desc:'Check WCAG AA and AAA colour contrast ratios for normal, large and small text. Live preview at all sizes. Outputs CSS colour pair, Tailwind and JS object.', url:'https://uiforge.dev/#contrast', imgAlt:'UIForge WCAG contrast checker showing 8.5:1 ratio with AA and AAA pass badges' },
+  timestamp: { title:'Unix Timestamp Converter – Date & Time Tool | UIForge', desc:'Convert Unix timestamps, ISO 8601 and relative times across 10 timezones. Outputs seconds, ms, UTC, local and relative formats. Click any value to copy.', url:'https://uiforge.dev/#timestamp', imgAlt:'UIForge Unix timestamp converter showing date conversions across timezones' },
+  textcase:  { title:'Text Case Converter – camelCase, snake_case & 12 Formats | UIForge', desc:'Convert text between 12 case styles — camelCase, PascalCase, snake_case, kebab-case, SCREAMING_SNAKE, dot.case, alternating and more. All shown at once.', url:'https://uiforge.dev/#textcase', imgAlt:'UIForge text case converter showing all 12 case format conversions at once' },
+  complib:   { title:'UI Component Library – Copy-Paste CSS & Tailwind Components | UIForge', desc:'81 production-ready UI components across 14 categories — buttons, cards, modals, tables, chat and more. Copy as CSS, Tailwind or JSX. Free, no signup.', url:'https://uiforge.dev/#complib', imgAlt:'UIForge component library showing buttons, cards and form input components' },
+};
+
+function updateMeta(id) {
+  const m = TOOL_META[id] || TOOL_META['home'];
+  // <title>
+  document.title = m.title;
+  // <meta name="description">
+  let desc = document.querySelector('meta[name="description"]');
+  if (desc) desc.setAttribute('content', m.desc);
+  // OG tags
+  const og = (prop, val) => {
+    let el = document.querySelector(`meta[property="${prop}"]`);
+    if (el) el.setAttribute('content', val);
+  };
+  og('og:title',       m.title);
+  og('og:description', m.desc);
+  og('og:url',         m.url);
+  og('og:image:alt',   m.imgAlt);
+  // Twitter tags
+  const tw = (name, val) => {
+    let el = document.querySelector(`meta[name="${name}"]`);
+    if (el) el.setAttribute('content', val);
+  };
+  tw('twitter:title',       m.title);
+  tw('twitter:description', m.desc);
+  tw('twitter:image:alt',   m.imgAlt);
+  // canonical
+  let can = document.querySelector('link[rel="canonical"]');
+  if (can) can.setAttribute('href', m.url);
+  // history (hash-based SPA) — guarded against sandboxed iframes
+  try {
+    const isSandboxed = location.href === 'about:srcdoc' || location.protocol === 'about:';
+    if (!isSandboxed) {
+      if (id === 'home') {
+        history.replaceState(null, m.title, location.pathname);
+      } else {
+        history.replaceState(null, m.title, '#' + id);
+      }
+    }
+  } catch(e) { /* sandboxed — history API unavailable */ }
+}
+
 function navTo(id){
   VIEWS.forEach(v=>{const el=document.getElementById('view-'+v);if(el)el.classList.toggle('active',v===id);});
   window.scrollTo(0,0);
+  updateMeta(id);
   if(id==='gradient')initGradient();
   if(id==='shadow')initShadow();
   if(id==='border')updateBorderRadius();
@@ -756,6 +1143,7 @@ function navTo(id){
   if(id==='timestamp')tsNow();
   if(id==='textcase')updateTextCase();
   if(id==='complib')initCompLib();
+  if(id==='uiblocks')initUIBlocks();
 }
 function toggleTheme(){const h=document.documentElement;h.dataset.theme=h.dataset.theme==='dark'?'light':'dark';}
 let currentCat='all';
@@ -967,6 +1355,56 @@ const COMPS={
      css:`.banner{background:#6366f4;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;}\n.banner-text{font-family:monospace;font-size:10px;color:#fff;}\n.banner-btn{border:1px solid rgba(255,255,255,.3);color:#fff;background:transparent;padding:4px 10px;cursor:pointer;font-family:monospace;font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;}`,
      tw:`flex items-center justify-between bg-indigo-500 px-4 py-3`,
      jsx:`<div className="flex items-center justify-between bg-indigo-500 px-4 py-3">\n  <span className="font-mono text-xs text-white">🎉 New version available</span>\n  <button className="border border-white/30 text-white bg-transparent px-2.5 py-1 font-mono text-[8.5px] uppercase tracking-widest">Update</button>\n</div>`},
+    {id:'al6',name:'Dismissible Alert',tag:'Alert',
+     html:`<div class="uf-alert uf-alert-info" style="width:280px;position:relative;padding-right:36px"><span class="uf-alert-icon">ℹ</span><div class="uf-alert-body"><div class="uf-alert-title">Heads up</div><div class="uf-alert-msg">Your trial ends in 3 days.</div></div><button onclick="this.parentElement.style.display='none'" aria-label="Dismiss alert" style="position:absolute;top:10px;right:12px;background:none;border:none;cursor:pointer;font-size:16px;color:rgba(129,140,248,.6);line-height:1;padding:2px;transition:color .15s" onmouseover="this.style.color='#818cf8'" onmouseout="this.style.color='rgba(129,140,248,.6)'">×</button></div>`,
+     css:`.alert-dismissible{position:relative;padding-right:36px;}\n.alert-dismiss-btn{position:absolute;top:10px;right:12px;background:none;border:none;cursor:pointer;font-size:16px;line-height:1;opacity:.6;transition:opacity .15s;}\n.alert-dismiss-btn:hover{opacity:1;}`,
+     tw:`relative pr-9 [&_.dismiss]:absolute [&_.dismiss]:top-2.5 [&_.dismiss]:right-3 [&_.dismiss]:opacity-60 [&_.dismiss:hover]:opacity-100`,
+     jsx:`const [visible,setVisible]=useState(true);\nif(!visible) return null;\n<div className="relative flex items-start gap-3 p-4 bg-indigo-500/10 border-l-[3px] border-indigo-500 pr-9">\n  <span className="text-indigo-400">ℹ</span>\n  <div><p className="font-bold text-sm text-indigo-400">Heads up</p><p className="text-xs text-white/60 mt-0.5">Your trial ends in 3 days.</p></div>\n  <button onClick={()=>setVisible(false)} aria-label="Dismiss" className="absolute top-2.5 right-3 text-indigo-400/60 hover:text-indigo-400 text-base leading-none">×</button>\n</div>`},
+    {id:'al7',name:'Toast Stack',tag:'Toast',
+     html:`<div style="display:flex;flex-direction:column;gap:6px;width:280px">${[['✓','Changes saved','#22c55e','rgba(34,197,94,.1)','rgba(34,197,94,.2)'],['↑','Uploading file…','#5558f0','rgba(85,88,240,.1)','rgba(85,88,240,.2)'],['⚠','Storage 90% full','#f59e0b','rgba(245,158,11,.1)','rgba(245,158,11,.2)']].map(([ic,msg,c,bg,bc])=>`<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--surface);border:1px solid ${bc};border-left:3px solid ${c};box-shadow:0 4px 16px rgba(0,0,0,.3);animation:fadeInRight .3s ease both"><span style="font-size:13px;color:${c};flex-shrink:0">${ic}</span><span style="font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--text2);flex:1">${msg}</span><span style="font-family:var(--mono);font-size:12px;color:var(--text3);cursor:pointer;flex-shrink:0" onclick="this.parentElement.remove()">×</span></div>`).join('')}</div>`,
+     css:`@keyframes fadeInRight{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}\n.toast-stack{position:fixed;bottom:1rem;right:1rem;display:flex;flex-direction:column;gap:6px;z-index:9999;}\n.toast{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--surface);border-left:3px solid;box-shadow:0 4px 16px rgba(0,0,0,.3);animation:fadeInRight .3s ease both;}`,
+     tw:`fixed bottom-4 right-4 flex flex-col gap-1.5 z-[9999] [&_.toast]:flex [&_.toast]:items-center [&_.toast]:gap-2.5 [&_.toast]:px-3.5 [&_.toast]:py-2.5 [&_.toast]:bg-surface [&_.toast]:border-l-[3px] [&_.toast]:shadow-lg`,
+     jsx:`const [toasts,setToasts]=useState([]);\nconst add=(msg,type)=>{const id=Date.now();setToasts(t=>[...t,{id,msg,type}]);setTimeout(()=>dismiss(id),4000);};\nconst dismiss=id=>setToasts(t=>t.filter(x=>x.id!==id));\n<div className="fixed bottom-4 right-4 flex flex-col gap-1.5 z-[9999]">\n  {toasts.map(t=><div key={t.id} className="flex items-center gap-2.5 px-3.5 py-2.5 bg-surface border-l-[3px] shadow-lg" style={{borderColor:t.color}}>{t.icon} {t.msg} <button onClick={()=>dismiss(t.id)}>×</button></div>)}\n</div>`},
+    {id:'al8',name:'Inline Validation',tag:'Alert',
+     html:`<div style="display:flex;flex-direction:column;gap:10px;width:260px"><div class="uf-input-group"><label class="uf-label">Password</label><input class="uf-input uf-input-error" type="password" value="weak" aria-invalid="true" aria-describedby="pw-err"><div id="pw-err" style="display:flex;flex-direction:column;gap:4px;margin-top:6px">${[['✗ At least 8 characters','#f87171'],['✗ One uppercase letter','#f87171'],['✓ Contains a number','#4ade80']].map(([msg,c])=>`<div style="display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9px;letter-spacing:.08em;color:${c}">${msg}</div>`).join('')}</div></div></div>`,
+     css:`.validation-list{display:flex;flex-direction:column;gap:4px;margin-top:6px;}\n.validation-item{display:flex;align-items:center;gap:6px;font-family:monospace;font-size:9px;letter-spacing:.08em;}\n.validation-item.pass{color:#4ade80;}\n.validation-item.fail{color:#f87171;}`,
+     tw:`flex flex-col gap-1 mt-1.5 [&_.item]:flex [&_.item]:items-center [&_.item]:gap-1.5 [&_.item]:font-mono [&_.item]:text-[9px] [&_.pass]:text-green-400 [&_.fail]:text-red-400`,
+     jsx:`const rules=[{label:'At least 8 characters',test:v=>v.length>=8},{label:'One uppercase letter',test:v=>/[A-Z]/.test(v)},{label:'Contains a number',test:v=>/[0-9]/.test(v)}];\n<ul className="flex flex-col gap-1 mt-1.5" role="list">\n  {rules.map(r=><li key={r.label} className={\`flex items-center gap-1.5 font-mono text-[9px] \${r.test(value)?'text-green-400':'text-red-400'}\`}>{r.test(value)?'✓':'✗'} {r.label}</li>)}\n</ul>`},
+    {id:'al9',name:'Cookie Consent Bar',tag:'Banner',
+     html:`<div style="width:100%;max-width:340px;background:var(--surface);border:1.5px solid var(--rule-strong);padding:14px 16px;box-shadow:0 -4px 24px rgba(0,0,0,.3)"><div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px"><span style="font-size:16px;flex-shrink:0">🍪</span><div><div style="font-family:var(--editorial);font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px">We use cookies</div><div style="font-family:var(--sans);font-size:12px;color:var(--text3);line-height:1.5;font-style:italic">We use cookies to improve your experience. By continuing, you agree to our cookie policy.</div></div></div><div style="display:flex;gap:8px"><button class="uf-btn uf-btn-primary uf-btn-sm" style="flex:1;justify-content:center">Accept All</button><button class="uf-btn uf-btn-ghost uf-btn-sm" style="flex:1;justify-content:center">Decline</button></div></div>`,
+     css:`.cookie-bar{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1.5px solid var(--rule-strong);padding:14px 20px;box-shadow:0 -4px 24px rgba(0,0,0,.3);display:flex;align-items:center;gap:16px;}\n.cookie-text{flex:1;font-size:13px;color:var(--text2);}\n.cookie-actions{display:flex;gap:8px;}`,
+     tw:`fixed bottom-0 inset-x-0 bg-surface border-t border-white/20 px-5 py-3.5 flex items-center gap-4 shadow-[0_-4px_24px_rgba(0,0,0,0.3)] z-50`,
+     jsx:`const [shown,setShown]=useState(!localStorage.getItem('cookie-consent'));\nif(!shown) return null;\n<div role="dialog" aria-label="Cookie consent" className="fixed bottom-0 inset-x-0 bg-surface border-t border-white/20 px-5 py-3.5 flex items-center gap-4 shadow-[0_-4px_24px_rgba(0,0,0,0.3)] z-50">\n  <p className="flex-1 text-sm text-white/60">🍪 We use cookies to improve your experience.</p>\n  <div className="flex gap-2">\n    <button onClick={()=>{localStorage.setItem('cookie-consent','1');setShown(false);}}>Accept</button>\n    <button onClick={()=>setShown(false)}>Decline</button>\n  </div>\n</div>`},
+    {id:'al10',name:'System Status Bar',tag:'Banner',
+     html:`<div style="width:100%;max-width:340px;display:flex;flex-direction:column;gap:4px">${[['● All Systems Operational','#22c55e','rgba(34,197,94,.08)','rgba(34,197,94,.2)'],['⚠ API Degraded Performance','#f59e0b','rgba(245,158,11,.08)','rgba(245,158,11,.2)'],['✕ Database Outage','#ef4444','rgba(239,68,68,.08)','rgba(239,68,68,.2)']].map(([msg,c,bg,bc])=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:9px 14px;background:${bg};border:1px solid ${bc}"><span style="font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:${c}">${msg}</span><span style="font-family:var(--mono);font-size:8.5px;color:${c};opacity:.6">now</span></div>`).join('')}</div>`,
+     css:`.status-bar{display:flex;align-items:center;justify-content:space-between;padding:9px 14px;border:1px solid;}\n.status-operational{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.2);color:#22c55e;}\n.status-degraded{background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.2);color:#f59e0b;}\n.status-outage{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.2);color:#ef4444;}`,
+     tw:`flex items-center justify-between px-3.5 py-2 border font-mono text-[9.5px] tracking-wider`,
+     jsx:`<div className={\`flex items-center justify-between px-3.5 py-2 border font-mono text-[9.5px] tracking-wider \${status==='ok'?'bg-green-500/10 border-green-500/20 text-green-400':status==='degraded'?'bg-yellow-500/10 border-yellow-500/20 text-yellow-400':'bg-red-500/10 border-red-500/20 text-red-400'}\`}><span>{statusMessage}</span><time>{timestamp}</time></div>`},
+    {id:'al11',name:'Announcement Ribbon',tag:'Banner',
+     html:`<div style="width:100%;max-width:340px;background:linear-gradient(90deg,#5558f0,#a78bfa);padding:10px 16px;display:flex;align-items:center;gap:12px;position:relative;overflow:hidden"><div style="position:absolute;left:-10px;top:50%;transform:translateY(-50%);width:40px;height:40px;background:rgba(255,255,255,.08);border-radius:50%"></div><div style="position:absolute;right:-20px;top:50%;transform:translateY(-50%);width:60px;height:60px;background:rgba(255,255,255,.05);border-radius:50%"></div><span style="font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;padding:3px 8px;background:rgba(255,255,255,.2);color:#fff;flex-shrink:0">New</span><span style="font-family:var(--editorial);font-size:13px;font-weight:700;color:#fff;flex:1">UIForge v2 — Component Library is live!</span><button style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.6);background:none;border:none;cursor:pointer;padding:4px;flex-shrink:0;line-height:1" onclick="this.parentElement.style.display='none'" aria-label="Dismiss">×</button></div>`,
+     css:`.announcement{background:linear-gradient(90deg,#5558f0,#a78bfa);padding:10px 16px;display:flex;align-items:center;gap:12px;}\n.announcement-pill{font-family:monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;padding:3px 8px;background:rgba(255,255,255,.2);color:#fff;}\n.announcement-text{font-weight:700;color:#fff;flex:1;}`,
+     tw:`bg-gradient-to-r from-indigo-500 to-violet-400 px-4 py-2.5 flex items-center gap-3`,
+     jsx:`<div className="bg-gradient-to-r from-indigo-500 to-violet-400 px-4 py-2.5 flex items-center gap-3">\n  <span className="font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 bg-white/20 text-white">New</span>\n  <span className="font-bold text-sm text-white flex-1">{message}</span>\n  <button onClick={dismiss} className="text-white/60 hover:text-white text-base leading-none">×</button>\n</div>`},
+    {id:'al12',name:'Floating Alert',tag:'Alert',
+     html:`<div style="position:relative;width:280px;padding:16px;background:var(--surface);border:1.5px solid var(--rule-strong);box-shadow:0 12px 40px rgba(0,0,0,.4),0 0 0 1px rgba(85,88,240,.2);display:flex;gap:12px;align-items:flex-start"><div style="width:32px;height:32px;background:rgba(85,88,240,.15);border:1.5px solid rgba(85,88,240,.3);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">💡</div><div><div style="font-family:var(--editorial);font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px">Pro tip</div><div style="font-family:var(--sans);font-size:12.5px;color:var(--text2);line-height:1.6;font-style:italic">Press ⌘K to search all 17 tools instantly from anywhere in the app.</div></div></div>`,
+     css:`.floating-alert{position:fixed;bottom:5rem;right:1.5rem;padding:16px;background:var(--surface);border:1.5px solid var(--rule-strong);box-shadow:0 12px 40px rgba(0,0,0,.4),0 0 0 1px rgba(85,88,240,.2);z-index:100;max-width:320px;display:flex;gap:12px;align-items:flex-start;}`,
+     tw:`fixed bottom-20 right-6 flex items-start gap-3 p-4 bg-surface border border-white/20 shadow-[0_12px_40px_rgba(0,0,0,0.4),0_0_0_1px_rgba(85,88,240,0.2)] z-[100] max-w-xs`,
+     jsx:`<div role="status" aria-live="polite" className="fixed bottom-20 right-6 flex items-start gap-3 p-4 bg-surface border border-white/20 shadow-[0_12px_40px_rgba(0,0,0,0.4)] z-[100] max-w-xs">\n  <div className="w-8 h-8 flex-shrink-0 bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center">💡</div>\n  <div><h4 className="font-bold text-sm mb-1">Pro tip</h4><p className="text-xs text-white/60 leading-relaxed italic">{tip}</p></div>\n</div>`},
+    {id:'al13',name:'Progress Alert',tag:'Alert',
+     html:`<div class="uf-alert uf-alert-info" style="width:280px;flex-direction:column;gap:10px;align-items:stretch"><div style="display:flex;align-items:center;gap:10px"><span class="uf-alert-icon">⟳</span><div class="uf-alert-body"><div class="uf-alert-title">Uploading files…</div><div class="uf-alert-msg">3 of 8 files complete.</div></div><span style="font-family:var(--mono);font-size:10px;color:#818cf8;margin-left:auto;flex-shrink:0">37%</span></div><div style="height:4px;background:rgba(129,140,248,.15);border-radius:2px;overflow:hidden"><div style="height:100%;width:37%;background:#818cf8;border-radius:2px;transition:width .4s ease"></div></div></div>`,
+     css:`.alert-progress{display:flex;flex-direction:column;gap:10px;}\n.alert-progress-bar{height:4px;background:rgba(129,140,248,.15);border-radius:2px;overflow:hidden;}\n.alert-progress-fill{height:100%;background:#818cf8;border-radius:2px;transition:width .4s ease;}`,
+     tw:`flex flex-col gap-2.5 p-4 bg-indigo-500/10 border-l-[3px] border-indigo-500`,
+     jsx:`<div role="status" aria-live="polite" className="flex flex-col gap-2.5 p-4 bg-indigo-500/10 border-l-[3px] border-indigo-500">\n  <div className="flex items-center gap-3">\n    <span className="text-indigo-400">⟳</span>\n    <div className="flex-1"><p className="font-bold text-sm text-indigo-400">Uploading…</p><p className="text-xs text-white/50 mt-0.5">{done} of {total} files</p></div>\n    <span className="font-mono text-xs text-indigo-400">{pct}%</span>\n  </div>\n  <div className="h-1 bg-indigo-500/15 rounded-full overflow-hidden"><div className="h-full bg-indigo-500 rounded-full transition-all" style={{width:\`\${pct}%\`}} /></div>\n</div>`},
+    {id:'al14',name:'Contextual Hint',tag:'Alert',
+     html:`<div style="display:flex;flex-direction:column;gap:8px;width:280px">${[['💡','First visit','You can drag cards in the Widget Cards section to reorder them.'],['⌨','Shortcut','Press ⌘K to open the global search from anywhere.']].map(([ic,label,msg])=>`<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 14px;background:var(--surface2);border:1px solid var(--border2);border-left:2px solid var(--text3)"><span style="font-size:13px;flex-shrink:0">${ic}</span><div><div style="font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text3);margin-bottom:3px">${label}</div><div style="font-family:var(--sans);font-size:12px;color:var(--text2);line-height:1.5;font-style:italic">${msg}</div></div></div>`).join('')}</div>`,
+     css:`.hint{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;background:var(--surface2);border:1px solid var(--border2);border-left:2px solid var(--text3);}\n.hint-label{font-family:monospace;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text3);margin-bottom:3px;}\n.hint-text{font-size:12px;color:var(--text2);line-height:1.5;font-style:italic;}`,
+     tw:`flex items-start gap-2.5 px-3.5 py-2.5 bg-white/5 border border-white/20 border-l-2 border-l-white/40`,
+     jsx:`<aside className="flex items-start gap-2.5 px-3.5 py-2.5 bg-white/5 border border-white/20 border-l-2 border-l-white/40">\n  <span aria-hidden="true">{icon}</span>\n  <div><p className="font-mono text-[8.5px] uppercase tracking-widest text-white/40 mb-0.5">{label}</p><p className="text-xs text-white/60 leading-relaxed italic">{hint}</p></div>\n</aside>`},
+    {id:'al15',name:'Maintenance Banner',tag:'Banner',
+     html:`<div style="width:100%;max-width:340px;background:var(--surface2);border:1.5px solid rgba(245,158,11,.3);padding:12px 16px;display:flex;align-items:center;gap:12px"><div style="display:flex;flex-direction:column;gap:2px;flex:1"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:14px">🔧</span><span style="font-family:var(--editorial);font-size:13px;font-weight:700;color:#fbbf24">Scheduled Maintenance</span></div><div style="font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:var(--text3);margin-left:22px">Sat 20 Mar · 02:00–04:00 UTC · API may be slow</div></div><div style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border:1px solid rgba(245,158,11,.3);color:#fbbf24;cursor:pointer;flex-shrink:0;transition:all .15s" onmouseover="this.style.background='rgba(245,158,11,.1)'" onmouseout="this.style.background='transparent'">Details</div></div>`,
+     css:`.maintenance-banner{background:var(--surface2);border:1.5px solid rgba(245,158,11,.3);padding:12px 16px;display:flex;align-items:center;gap:12px;}\n.maintenance-title{font-weight:700;color:#fbbf24;}\n.maintenance-time{font-family:monospace;font-size:9px;color:var(--text3);}`,
+     tw:`flex items-center gap-3 px-4 py-3 bg-white/5 border border-yellow-500/30`,
+     jsx:`<div role="alert" className="flex items-center gap-3 px-4 py-3 bg-white/5 border border-yellow-500/30">\n  <div className="flex-1">\n    <div className="flex items-center gap-2"><span>🔧</span><strong className="text-yellow-400 text-sm">Scheduled Maintenance</strong></div>\n    <p className="font-mono text-[9px] text-white/40 mt-0.5 ml-6">{window}</p>\n  </div>\n  <a href={detailsUrl} className="font-mono text-[9px] uppercase tracking-widest px-2.5 py-1 border border-yellow-500/30 text-yellow-400 hover:bg-yellow-500/10 transition-colors">Details</a>\n</div>`},
   ],
   toggles:[
     {id:'t1',name:'Toggle Switch',tag:'Toggle',
@@ -1216,16 +1654,171 @@ const COMPS={
      tw:`inline-flex items-center gap-2 px-[14px] py-[5px] pl-1.5 border border-indigo-500/30 bg-indigo-500/10`,
      jsx:`<div className="inline-flex items-center gap-2 px-[14px] py-[5px] pl-1.5 border border-indigo-500/30 bg-indigo-500/10 cursor-pointer hover:border-indigo-500/50 transition-colors">\n  <span className="bg-indigo-500 text-white font-mono text-[8px] uppercase tracking-widest px-2 py-0.5">New</span>\n  <span className="font-mono text-[10px] tracking-wider text-white/60">{announcement}</span>\n  <span className="text-indigo-400 text-xs">→</span>\n</div>`},
   ],
+  widgetcards:[
+    {id:'wc1',name:'Button Component Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#5558f0" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon">🔲</div><div class="wc-title-wrap"><div class="wc-title">Button Component</div><div class="wc-subtitle">UI Element · v2.4</div></div><span class="wc-drag-handle" aria-label="Drag to reorder" title="Drag to reorder">⠿</span></div><div class="wc-preview"><button class="uf-btn uf-btn-primary uf-btn-sm">Primary</button><button class="uf-btn uf-btn-secondary uf-btn-sm">Secondary</button><button class="uf-btn uf-btn-ghost uf-btn-sm">Ghost</button></div><div class="wc-footer"><span class="wc-tag">Button</span><span class="wc-tag">Interactive</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Variants</span><span class="wc-detail-val">8 styles</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">States</span><span class="wc-detail-val">hover, active, disabled</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Sizes</span><span class="wc-detail-val">sm, md, lg, icon</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Output</span><span class="wc-detail-val">CSS · Tailwind · JSX</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('<button class=\\'btn btn-primary\\'>Label</button>')">Copy HTML</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.widget-card{background:var(--surface);border:1.5px solid var(--rule-strong);transition:box-shadow .22s,border-color .22s,transform .18s;}\n.widget-card:hover{border-color:#5558f0;box-shadow:0 8px 32px rgba(0,0,0,.35),0 2px 8px rgba(85,88,240,.18);transform:translateY(-2px);}\n.widget-card-details{max-height:0;overflow:hidden;transition:max-height .3s ease;}\n.widget-card-details.open{max-height:300px;}`,
+     tw:`bg-surface border border-white/20 hover:border-indigo-500 hover:shadow-[0_8px_32px_rgba(0,0,0,0.35)] hover:-translate-y-0.5 transition-all`,
+     jsx:`const [open,setOpen]=useState(false);\nconst [isDragging,setIsDragging]=useState(false);\n<div draggable onDragStart={()=>setIsDragging(true)} onDragEnd={()=>setIsDragging(false)}\n  className={\`border border-white/20 hover:border-indigo-500 hover:shadow-xl hover:-translate-y-0.5 transition-all \${isDragging?'opacity-50 scale-95':''}\`}>\n  <div className="p-4 flex items-start gap-3">\n    <span className="w-9 h-9 flex items-center justify-center bg-indigo-500/10 border border-indigo-500/20 text-lg flex-shrink-0">🔲</span>\n    <div><h3 className="font-bold text-sm">Button Component</h3><p className="font-mono text-[8.5px] uppercase tracking-widest text-white/40 mt-0.5">UI Element · v2.4</p></div>\n  </div>\n  <div className="px-4 py-3 border-t border-white/10 bg-black/20 flex gap-2">{/* preview */}</div>\n  <button onClick={()=>setOpen(!open)} className="...">{open?'▴':'▾'} Details</button>\n  {open && <div className="...">{/* detail grid */}</div>}\n</div>`},
+    {id:'wc2',name:'Color Palette Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#a78bfa" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">🎨</div><div class="wc-title-wrap"><div class="wc-title">Indigo Palette</div><div class="wc-subtitle">Brand · 9 swatches</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="gap:3px">${['#ede9fe','#ddd6fe','#c4b5fd','#a78bfa','#8b5cf6','#7c3aed','#6d28d9','#5b21b6','#4c1d95'].map(c=>`<div style="width:24px;height:40px;background:${c};cursor:pointer;transition:transform .15s" title="${c}" onclick="navigator.clipboard.writeText('${c}')" onmouseover="this.style.transform='scaleY(1.15)'" onmouseout="this.style.transform='scaleY(1)'"></div>`).join('')}</div><div class="wc-footer"><span class="wc-tag">Colors</span><span class="wc-tag">Brand</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Shades</span><span class="wc-detail-val">50–900 scale</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Base</span><span class="wc-detail-val">#8b5cf6</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Harmony</span><span class="wc-detail-val">Monochromatic</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">WCAG</span><span class="wc-detail-val">AA on white ✓</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('--color-violet-500:#8b5cf6;')">Copy CSS Vars</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.palette-card:hover{border-color:#a78bfa;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}\n.swatch{width:24px;height:40px;cursor:pointer;transition:transform .15s;}\n.swatch:hover{transform:scaleY(1.15);}`,
+     tw:`hover:border-violet-400 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="border border-white/20 hover:border-violet-400 hover:shadow-xl hover:-translate-y-0.5 transition-all">\n  <div className="flex gap-0.5 p-4 bg-black/20">\n    {shades.map(s => <div key={s.hex} onClick={()=>copy(s.hex)} className="h-10 flex-1 cursor-pointer hover:scale-y-110 transition-transform" style={{background:s.hex}} title={s.hex} />)}\n  </div>\n</div>`},
+    {id:'wc3',name:'Typography Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#06b6d4" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">Aa</div><div class="wc-title-wrap"><div class="wc-title">Type Scale</div><div class="wc-subtitle">Barlow Condensed · clamp()</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="flex-direction:column;align-items:flex-start;gap:4px;padding:10px 16px">${[['clamp(2.5rem,5vw,4rem)','36','800'],['clamp(1.5rem,3vw,2.25rem)','24','700'],['clamp(1rem,2vw,1.25rem)','16','400']].map(([size,px,w])=>`<div style="font-family:'Barlow Condensed',sans-serif;font-size:${['22px','16px','13px'][['36','24','16'].indexOf(px)]};font-weight:${w};color:var(--text);line-height:1.1">Aa — ${size}</div>`).join('')}</div><div class="wc-footer"><span class="wc-tag">Typography</span><span class="wc-tag">Fluid</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Family</span><span class="wc-detail-val">Barlow Condensed</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Technique</span><span class="wc-detail-val">CSS clamp()</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Steps</span><span class="wc-detail-val">6 size tokens</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Min vw</span><span class="wc-detail-val">320px → 1280px</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('font-size:clamp(1rem,2vw,1.25rem);')">Copy CSS</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.type-card:hover{border-color:#06b6d4;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-cyan-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="border border-white/20 hover:border-cyan-500 hover:shadow-xl hover:-translate-y-0.5 transition-all">\n  {scale.map(step => (\n    <p key={step.name} style={{fontSize:step.size,fontWeight:step.weight}} className="leading-tight">{step.label}</p>\n  ))}\n</div>`},
+    {id:'wc4',name:'Gradient Saved Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#f59e0b" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="background:linear-gradient(135deg,#6366f4,#ec4899);border:none;font-size:0">&nbsp;</div><div class="wc-title-wrap"><div class="wc-title">Neon Dusk</div><div class="wc-subtitle">Linear · 135° · 3 stops</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="padding:0;min-height:80px"><div style="width:100%;height:80px;background:linear-gradient(135deg,#6366f4 0%,#ec4899 55%,#f59e0b 100%)"></div></div><div class="wc-footer"><span class="wc-tag">Gradient</span><span class="wc-tag">Saved</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Stop 1</span><span class="wc-detail-val">#6366f4 0%</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Stop 2</span><span class="wc-detail-val">#ec4899 55%</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Stop 3</span><span class="wc-detail-val">#f59e0b 100%</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Angle</span><span class="wc-detail-val">135deg</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('background:linear-gradient(135deg,#6366f4 0%,#ec4899 55%,#f59e0b 100%);')">Copy CSS</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.gradient-card:hover{border-color:#f59e0b;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-yellow-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="border border-white/20 hover:border-yellow-500 hover:shadow-xl hover:-translate-y-0.5 transition-all">\n  <div className="h-20 w-full" style={{background:'linear-gradient(135deg,#6366f4,#ec4899,#f59e0b)'}} />\n</div>`},
+    {id:'wc5',name:'Shadow Preset Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#22c55e" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">🌑</div><div class="wc-title-wrap"><div class="wc-title">Layered Depth</div><div class="wc-subtitle">Box Shadow · 3 layers</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview"><div style="width:80px;height:60px;background:var(--accent);box-shadow:0 2px 4px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25),0 20px 48px rgba(0,0,0,.15)"></div></div><div class="wc-footer"><span class="wc-tag">Shadow</span><span class="wc-tag">Preset</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Layer 1</span><span class="wc-detail-val">0 2px 4px rgba(0,0,0,.3)</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Layer 2</span><span class="wc-detail-val">0 8px 24px rgba(0,0,0,.25)</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Layer 3</span><span class="wc-detail-val">0 20px 48px rgba(0,0,0,.15)</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Use case</span><span class="wc-detail-val">Floating cards</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('box-shadow:0 2px 4px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25),0 20px 48px rgba(0,0,0,.15);')">Copy CSS</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.shadow-card:hover{border-color:#22c55e;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-green-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="border border-white/20 hover:border-green-500 hover:shadow-xl hover:-translate-y-0.5 transition-all">\n  <div className="flex items-center justify-center p-6 bg-black/20">\n    <div className="w-20 h-14 bg-indigo-500" style={{boxShadow:preset.value}} />\n  </div>\n</div>`},
+    {id:'wc6',name:'Animation Preset Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#ec4899" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">✨</div><div class="wc-title-wrap"><div class="wc-title">Fade In Up</div><div class="wc-subtitle">Animation · 0.6s ease-out</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview"><div id="wc6-demo" style="width:48px;height:48px;background:var(--accent);border-radius:4px;animation:fadeInUp .6s ease-out both" onclick="this.style.animation='none';this.offsetHeight;this.style.animation='fadeInUp .6s ease-out both'" title="Click to replay" style="cursor:pointer"></div></div><div class="wc-footer"><span class="wc-tag">Animation</span><span class="wc-tag">Entrance</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Duration</span><span class="wc-detail-val">0.6s</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Easing</span><span class="wc-detail-val">ease-out</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Fill</span><span class="wc-detail-val">both</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Offset</span><span class="wc-detail-val">translateY(24px)</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('@keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}')">Copy CSS</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`@keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}\n.anim-card:hover{border-color:#ec4899;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-pink-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="border border-white/20 hover:border-pink-500 hover:shadow-xl hover:-translate-y-0.5 transition-all">\n  <div className="flex items-center justify-center p-6 bg-black/20">\n    <div key={replay} className="w-12 h-12 bg-indigo-500 rounded" style={{animation:'fadeInUp .6s ease-out both'}} />\n  </div>\n  <button onClick={()=>setReplay(r=>r+1)} className="...">↺ Replay</button>\n</div>`},
+    {id:'wc7',name:'Form Layout Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#06b6d4" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">📋</div><div class="wc-title-wrap"><div class="wc-title">Contact Form</div><div class="wc-subtitle">3 fields · validated</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="flex-direction:column;align-items:stretch;gap:6px;padding:12px 16px"><input class="uf-input" placeholder="Name" aria-label="Name preview" style="font-size:11px;padding:6px 10px"><input class="uf-input" placeholder="Email" aria-label="Email preview" style="font-size:11px;padding:6px 10px"><button class="uf-btn uf-btn-primary" style="padding:7px 14px;font-size:9px;justify-content:center">Submit</button></div><div class="wc-footer"><span class="wc-tag">Form</span><span class="wc-tag">Layout</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Fields</span><span class="wc-detail-val">name, email, message</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Validation</span><span class="wc-detail-val">HTML5 + JS</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Accessible</span><span class="wc-detail-val">Labels + aria ✓</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">States</span><span class="wc-detail-val">error, success, loading</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('<form><label>Name<input type=text name=name required></label></form>')">Copy HTML</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.form-card:hover{border-color:#06b6d4;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-cyan-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<form onSubmit={handleSubmit} className="flex flex-col gap-3 p-4">\n  <label className="flex flex-col gap-1.5"><span className="font-mono text-[9px] uppercase tracking-widest text-white/40">Name</span><input className="..." name="name" required /></label>\n  <label className="flex flex-col gap-1.5"><span className="font-mono text-[9px] uppercase tracking-widest text-white/40">Email</span><input className="..." type="email" name="email" required /></label>\n  <button type="submit" className="...">Submit</button>\n</form>`},
+    {id:'wc8',name:'Glassmorphism Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#a78bfa" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">🔮</div><div class="wc-title-wrap"><div class="wc-title">Glass Effect</div><div class="wc-subtitle">Glassmorphism · blur 12px</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="padding:0;overflow:hidden;min-height:80px;position:relative"><div style="position:absolute;inset:0;background:linear-gradient(135deg,#6366f4,#ec4899,#f59e0b)"></div><div style="position:relative;margin:12px auto;width:120px;padding:10px 14px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);text-align:center;font-family:var(--editorial);font-size:13px;font-weight:700;color:#fff">Glass Card</div></div><div class="wc-footer"><span class="wc-tag">Glass</span><span class="wc-tag">Effect</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Blur</span><span class="wc-detail-val">blur(12px)</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">BG</span><span class="wc-detail-val">rgba(255,255,255,.15)</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Border</span><span class="wc-detail-val">rgba(255,255,255,.25)</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Safari</span><span class="wc-detail-val">-webkit prefix ✓</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('backdrop-filter:blur(12px);background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);')">Copy CSS</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.glass-card:hover{border-color:#a78bfa;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-violet-400 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="backdrop-blur-xl bg-white/15 border border-white/25 p-5 text-white">\n  {children}\n</div>`},
+    {id:'wc9',name:'Grid Layout Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#f59e0b" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">⊞</div><div class="wc-title-wrap"><div class="wc-title">3-Col Grid</div><div class="wc-subtitle">CSS Grid · repeat(3,1fr)</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;width:160px">${Array.from({length:6},(_,i)=>`<div style="height:28px;background:rgba(85,88,240,${0.3+i*.1});border-radius:2px"></div>`).join('')}</div></div><div class="wc-footer"><span class="wc-tag">Grid</span><span class="wc-tag">Layout</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Columns</span><span class="wc-detail-val">repeat(3, 1fr)</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Gap</span><span class="wc-detail-val">16px</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Rows</span><span class="wc-detail-val">auto</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Breakpoint</span><span class="wc-detail-val">1col @ 600px</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('display:grid;grid-template-columns:repeat(3,1fr);gap:16px;')">Copy CSS</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.grid-card:hover{border-color:#f59e0b;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-yellow-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="grid grid-cols-3 gap-4">{items.map(i=><div key={i.id}>{i.content}</div>)}</div>`},
+    {id:'wc10',name:'API Endpoint Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#22c55e" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:15px">⚡</div><div class="wc-title-wrap"><div class="wc-title">GET /api/users</div><div class="wc-subtitle">REST · 200 OK · 42ms</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="flex-direction:column;align-items:flex-start;padding:10px 16px;gap:4px"><div style="display:flex;align-items:center;gap:8px"><span style="font-family:var(--mono);font-size:8px;letter-spacing:.1em;padding:2px 8px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80;text-transform:uppercase">GET</span><span style="font-family:var(--mono);font-size:10px;color:var(--accent2)">/api/v1/users</span></div><div style="display:flex;align-items:center;gap:8px;margin-top:2px"><span style="font-family:var(--mono);font-size:9px;color:#4ade80">● 200 OK</span><span style="font-family:var(--mono);font-size:9px;color:var(--text3)">42ms · JSON</span></div></div><div class="wc-footer"><span class="wc-tag">API</span><span class="wc-tag">REST</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Method</span><span class="wc-detail-val">GET</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Auth</span><span class="wc-detail-val">Bearer token</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Rate limit</span><span class="wc-detail-val">100 req/min</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Returns</span><span class="wc-detail-val">User[] · paginated</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('fetch(\\''/api/v1/users\\',{headers:{Authorization:\\'Bearer TOKEN\\'}}).then(r=>r.json())')">Copy Fetch</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.api-card:hover{border-color:#22c55e;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-green-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="border border-white/20 hover:border-green-500 hover:shadow-xl hover:-translate-y-0.5 transition-all p-4">\n  <div className="flex items-center gap-2">\n    <span className="font-mono text-[8px] uppercase px-2 py-0.5 bg-green-500/15 border border-green-500/30 text-green-400">{method}</span>\n    <span className="font-mono text-xs text-violet-300">{endpoint}</span>\n  </div>\n  <div className="flex gap-2 mt-1"><span className="font-mono text-[9px] text-green-400">● {status}</span><span className="font-mono text-[9px] text-white/40">{latency}ms</span></div>\n</div>`},
+    {id:'wc11',name:'Saved Animation Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#ec4899" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">🎬</div><div class="wc-title-wrap"><div class="wc-title">Bounce Spring</div><div class="wc-subtitle">cubic-bezier · infinite</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview"><div style="width:40px;height:40px;background:var(--accent);border-radius:50%;animation:wcBounce 1.2s cubic-bezier(0.34,1.56,0.64,1) infinite"></div></div><div class="wc-footer"><span class="wc-tag">Animation</span><span class="wc-tag">Looping</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Duration</span><span class="wc-detail-val">1.2s</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Easing</span><span class="wc-detail-val">cubic-bezier spring</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Iteration</span><span class="wc-detail-val">infinite</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Property</span><span class="wc-detail-val">transform: scale</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('@keyframes bounce{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}')">Copy CSS</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`@keyframes wcBounce{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}\n.anim2-card:hover{border-color:#ec4899;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-pink-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div key={key} className="w-10 h-10 rounded-full bg-indigo-500" style={{animation:'bounce 1.2s cubic-bezier(0.34,1.56,0.64,1) infinite'}} />`},
+    {id:'wc12',name:'Theme Token Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#5558f0" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">🎨</div><div class="wc-title-wrap"><div class="wc-title">Design Tokens</div><div class="wc-subtitle">CSS Variables · Dark mode</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="flex-direction:column;align-items:flex-start;gap:4px;padding:10px 16px">${[['--color-primary','#5558f0'],['--color-bg','#0f0e0d'],['--color-text','#f0ede8'],['--radius','8px']].map(([k,v])=>`<div style="display:flex;gap:8px;align-items:center;width:100%"><span style="font-family:var(--mono);font-size:9px;color:var(--text3);flex:1">${k}</span><span style="font-family:var(--mono);font-size:9px;color:var(--accent2)">${v}</span></div>`).join('')}</div><div class="wc-footer"><span class="wc-tag">Tokens</span><span class="wc-tag">CSS Vars</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Tokens</span><span class="wc-detail-val">24 variables</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Scope</span><span class="wc-detail-val">:root + [data-theme]</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Dark mode</span><span class="wc-detail-val">Supported ✓</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Format</span><span class="wc-detail-val">CSS custom props</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText(':root{--color-primary:#5558f0;--color-bg:#0f0e0d;--color-text:#f0ede8;}')">Copy Tokens</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.token-card:hover{border-color:#5558f0;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-indigo-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="border border-white/20 hover:border-indigo-500 hover:shadow-xl transition-all">\n  {tokens.map(t=><div key={t.name} className="flex items-center justify-between px-4 py-1.5 font-mono text-xs"><span className="text-white/40">{t.name}</span><span className="text-violet-300">{t.value}</span></div>)}\n</div>`},
+    {id:'wc13',name:'Clip-Path Shape Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#a78bfa" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">✦</div><div class="wc-title-wrap"><div class="wc-title">Star Shape</div><div class="wc-subtitle">clip-path · polygon</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview"><div style="width:72px;height:72px;background:linear-gradient(135deg,var(--accent),var(--accent2));clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);transition:clip-path .3s"></div></div><div class="wc-footer"><span class="wc-tag">Clip-path</span><span class="wc-tag">Shape</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Shape</span><span class="wc-detail-val">Star (10 points)</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Type</span><span class="wc-detail-val">polygon()</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Safari</span><span class="wc-detail-val">-webkit prefix ✓</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Animatable</span><span class="wc-detail-val">Yes, with transition</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);')">Copy CSS</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.shape-card:hover{border-color:#a78bfa;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-violet-400 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="w-18 h-18 bg-gradient-to-br from-indigo-500 to-violet-400" style={{clipPath:'polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)'}} />`},
+    {id:'wc14',name:'Contrast Pair Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#22c55e" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">◑</div><div class="wc-title-wrap"><div class="wc-title">High Contrast Pair</div><div class="wc-subtitle">WCAG AAA · 12.6:1</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="padding:0;flex-direction:column;gap:0"><div style="padding:10px 16px;background:#0f0e0d;font-family:var(--editorial);font-size:15px;font-weight:700;color:#f0ede8">Aa — Light on Dark</div><div style="padding:10px 16px;background:#f0ede8;font-family:var(--editorial);font-size:15px;font-weight:700;color:#0f0e0d">Aa — Dark on Light</div></div><div class="wc-footer"><span class="wc-tag">Contrast</span><span class="wc-tag">AAA ✓</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Ratio</span><span class="wc-detail-val">12.6:1</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">AA Normal</span><span class="wc-detail-val">✓ Pass (4.5+)</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">AAA Normal</span><span class="wc-detail-val">✓ Pass (7+)</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Foreground</span><span class="wc-detail-val">#f0ede8</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('color:#f0ede8;background-color:#0f0e0d;')">Copy CSS</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.contrast-card:hover{border-color:#22c55e;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-green-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="border border-white/20 hover:border-green-500 hover:shadow-xl transition-all">\n  <div style={{background:pair.bg,color:pair.fg}} className="px-4 py-2.5 font-bold text-sm">Aa — {pair.ratio}:1</div>\n  <div className="px-4 py-2 flex gap-2">\n    <span className="font-mono text-[8px] uppercase px-1.5 py-0.5 bg-green-500/10 text-green-400 border border-green-500/20">AA ✓</span>\n    {pair.ratio >= 7 && <span className="font-mono text-[8px] uppercase px-1.5 py-0.5 bg-green-500/10 text-green-400 border border-green-500/20">AAA ✓</span>}\n  </div>\n</div>`},
+    {id:'wc15',name:'Transform Preset Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#f59e0b" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">↗</div><div class="wc-title-wrap"><div class="wc-title">3D Flip Card</div><div class="wc-subtitle">transform · perspective</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="perspective:400px"><div style="width:80px;height:60px;background:var(--accent);transform:perspective(400px) rotateY(25deg) rotateX(10deg);transition:transform .3s" onmouseover="this.style.transform='perspective(400px) rotateY(-25deg) rotateX(-10deg)'" onmouseout="this.style.transform='perspective(400px) rotateY(25deg) rotateX(10deg)'"></div></div><div class="wc-footer"><span class="wc-tag">Transform</span><span class="wc-tag">3D</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">RotateY</span><span class="wc-detail-val">25deg</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">RotateX</span><span class="wc-detail-val">10deg</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Perspective</span><span class="wc-detail-val">400px</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Transition</span><span class="wc-detail-val">.3s ease</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('transform:perspective(400px) rotateY(25deg) rotateX(10deg);transition:transform .3s;')">Copy CSS</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.transform-card:hover{border-color:#f59e0b;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-yellow-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="[perspective:400px]">\n  <div className="hover:[transform:perspective(400px)_rotateY(-15deg)] [transform:perspective(400px)_rotateY(15deg)] transition-transform duration-300">{children}</div>\n</div>`},
+    {id:'wc16',name:'Component Checklist Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#06b6d4" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">✅</div><div class="wc-title-wrap"><div class="wc-title">QA Checklist</div><div class="wc-subtitle">Component review · 4/5</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="flex-direction:column;align-items:flex-start;gap:5px;padding:10px 16px">${[['Accessible labels','#4ade80',true],['Keyboard nav','#4ade80',true],['Dark mode','#4ade80',true],['Mobile tested','#4ade80',true],['Animation reduced','#f87171',false]].map(([l,c,done])=>`<div style="display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:9px;letter-spacing:.08em;color:${done?'var(--text2)':'var(--text3)'}"><span style="color:${c};font-size:11px">${done?'✓':'✗'}</span>${l}</div>`).join('')}</div><div class="wc-footer"><span class="wc-tag">QA</span><span class="wc-tag">4/5</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Passed</span><span class="wc-detail-val" style="color:#4ade80">4 checks ✓</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Failed</span><span class="wc-detail-val" style="color:#f87171">1 check ✗</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Pending</span><span class="wc-detail-val">prefers-reduced-motion</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Score</span><span class="wc-detail-val">80%</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn">Mark done</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.checklist-card:hover{border-color:#06b6d4;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-cyan-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="border border-white/20 hover:border-cyan-500 hover:shadow-xl transition-all">\n  {checks.map(c=><div key={c.id} className="flex items-center gap-2 px-4 py-1.5 font-mono text-[9px]"><span className={c.done?'text-green-400':'text-red-400'}>{c.done?'✓':'✗'}</span><span className={c.done?'text-white/60':'text-white/30'}>{c.label}</span></div>)}\n</div>`},
+    {id:'wc17',name:'SVG Icon Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#ec4899" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">⬡</div><div class="wc-title-wrap"><div class="wc-title">Hexagon Icon</div><div class="wc-subtitle">SVG · 24×24 · inline</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="gap:16px"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L21 7V17L12 22L3 17V7L12 2Z" stroke="currentColor" stroke-width="1.5" style="color:var(--accent)"/></svg><svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:rgba(85,88,240,.3)"><path d="M12 2L21 7V17L12 22L3 17V7L12 2Z"/></svg><svg width="48" height="48" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L21 7V17L12 22L3 17V7L12 2Z" fill="url(#hg)" /><defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5558f0"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient></defs></svg></div><div class="wc-footer"><span class="wc-tag">SVG</span><span class="wc-tag">Icon</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Size</span><span class="wc-detail-val">24×24 viewBox</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Stroke</span><span class="wc-detail-val">1.5px currentColor</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Variants</span><span class="wc-detail-val">outline, fill, gradient</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Format</span><span class="wc-detail-val">Inline SVG · optimised</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('<svg width=24 height=24 viewBox=\\'0 0 24 24\\' fill=none><path d=\\'M12 2L21 7V17L12 22L3 17V7L12 2Z\\' stroke=currentColor stroke-width=1.5/></svg>')">Copy SVG</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.icon-card:hover{border-color:#ec4899;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-pink-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-label={label} role="img">\n  <path d="M12 2L21 7V17L12 22L3 17V7L12 2Z" stroke="currentColor" strokeWidth={1.5} />\n</svg>`},
+    {id:'wc18',name:'Blob Asset Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#a78bfa" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">🫧</div><div class="wc-title-wrap"><div class="wc-title">Organic Blob</div><div class="wc-subtitle">SVG · 200×200 · fill</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview"><svg width="100" height="100" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><path d="M0.85 0.25C0.95 0.38 0.92 0.58 0.80 0.72C0.68 0.86 0.48 0.94 0.32 0.88C0.16 0.82 0.05 0.65 0.06 0.48C0.07 0.31 0.22 0.14 0.40 0.08C0.58 0.02 0.75 0.12 0.85 0.25Z" fill="url(#bg2)"/><defs><linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5558f0"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient></defs></svg></div><div class="wc-footer"><span class="wc-tag">Blob</span><span class="wc-tag">SVG Asset</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Complexity</span><span class="wc-detail-val">6 control points</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Fill</span><span class="wc-detail-val">Gradient</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Export</span><span class="wc-detail-val">SVG / data URI</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Editable</span><span class="wc-detail-val">Re-randomise ✓</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('<svg viewBox=\\'0 0 1 1\\'><path d=\\'M0.85 0.25C0.95 0.38 0.92 0.58...\\'  fill=\\'#5558f0\\'/></svg>')">Copy SVG</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.blob-card:hover{border-color:#a78bfa;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-violet-400 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<svg viewBox="0 0 1 1" width={size} height={size} aria-label="Organic blob shape">\n  <path d={blobPath} fill="url(#grad)" />\n</svg>`},
+    {id:'wc19',name:'Responsive Breakpoint Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#06b6d4" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">📐</div><div class="wc-title-wrap"><div class="wc-title">Breakpoint Map</div><div class="wc-subtitle">5 breakpoints · Tailwind</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="flex-direction:column;align-items:stretch;gap:4px;padding:10px 16px;width:100%">${[['sm','640px','text-sm'],['md','768px','text-base'],['lg','1024px','text-lg'],['xl','1280px','text-xl']].map(([name,px,cls])=>`<div style="display:flex;align-items:center;gap:8px"><div style="height:6px;border-radius:3px;background:var(--accent);opacity:${0.35+(['sm','md','lg','xl'].indexOf(name)+1)*0.15};flex:${{sm:1,md:2,lg:3,xl:4}[name]}"></div><span style="font-family:var(--mono);font-size:8.5px;color:var(--text3);white-space:nowrap">${name} ${px}</span></div>`).join('')}</div><div class="wc-footer"><span class="wc-tag">Responsive</span><span class="wc-tag">Tailwind</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">sm</span><span class="wc-detail-val">≥ 640px</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">md</span><span class="wc-detail-val">≥ 768px</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">lg</span><span class="wc-detail-val">≥ 1024px</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">xl</span><span class="wc-detail-val">≥ 1280px</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('@media(min-width:640px){} @media(min-width:768px){} @media(min-width:1024px){}')">Copy Media</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.breakpoint-card:hover{border-color:#06b6d4;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-cyan-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`// Tailwind responsive: className="text-sm md:text-base lg:text-lg xl:text-xl"\n// CSS: @media(min-width:640px){ ... }\n// @media(min-width:768px){ ... }\n// @media(min-width:1024px){ ... }`},
+    {id:'wc20',name:'Component Health Card',tag:'Widget',
+     html:`<div class="wc" draggable="true" style="--wc-color:#22c55e" ondragstart="wcDragStart(event,this)" ondragover="wcDragOver(event,this)" ondrop="wcDrop(event,this)" ondragend="wcDragEnd(event)"><div class="wc-accent-line"></div><div class="wc-header"><div class="wc-icon" style="font-size:16px">📊</div><div class="wc-title-wrap"><div class="wc-title">Library Health</div><div class="wc-subtitle">81 components · status</div></div><span class="wc-drag-handle" title="Drag to reorder">⠿</span></div><div class="wc-preview" style="flex-direction:column;align-items:stretch;gap:6px;padding:12px 16px;width:100%">${[['Components','81','var(--accent2)'],['Categories','14','var(--accent)'],['Accessibility','100%','#4ade80'],['Formats','3','#fbbf24']].map(([l,v,c])=>`<div style="display:flex;align-items:center;justify-content:space-between"><span style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3)">${l}</span><span style="font-family:var(--display);font-size:22px;line-height:1;color:${c}">${v}</span></div>`).join('')}</div><div class="wc-footer"><span class="wc-tag">Stats</span><span class="wc-tag">Library</span><button class="wc-expand-btn" onclick="wcToggle(this)" aria-expanded="false">Details <span class="arrow">▾</span></button></div><div class="wc-details"><div class="wc-details-grid"><div class="wc-detail-item"><span class="wc-detail-lbl">Last updated</span><span class="wc-detail-val">2025-03-20</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">WCAG</span><span class="wc-detail-val">AA compliant ✓</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Output</span><span class="wc-detail-val">CSS · Tailwind · JSX</span></div><div class="wc-detail-item"><span class="wc-detail-lbl">Size</span><span class="wc-detail-val">~250KB · no deps</span></div></div><div class="wc-detail-actions"><button class="wc-copy-btn" onclick="navigator.clipboard.writeText('https://uiforge.dev/#complib')">Copy URL</button><button class="wc-action-btn">Open →</button></div></div></div>`,
+     css:`.health-card:hover{border-color:#22c55e;box-shadow:0 8px 32px rgba(0,0,0,.35);transform:translateY(-2px);}`,
+     tw:`hover:border-green-500 hover:shadow-xl hover:-translate-y-0.5 transition-all`,
+     jsx:`<div className="border border-white/20 hover:border-green-500 hover:shadow-xl transition-all p-4">\n  {stats.map(s=><div key={s.label} className="flex items-center justify-between py-1.5 border-b border-white/10 last:border-0"><span className="font-mono text-[9px] uppercase tracking-widest text-white/40">{s.label}</span><span className="font-display text-2xl leading-none" style={{color:s.color}}>{s.value}</span></div>)}\n</div>`},
+  ],
 };
+
+
+// ═══════════════════════════════════════════
+// WIDGET CARDS — expand, drag-and-drop
+// ═══════════════════════════════════════════
+function wcToggle(btn) {
+  const card = btn.closest('.wc');
+  const details = card.querySelector('.wc-details');
+  const arrow = btn.querySelector('.arrow');
+  const isOpen = details.classList.toggle('open');
+  arrow.textContent = isOpen ? '▴' : '▾';
+  btn.setAttribute('aria-expanded', isOpen);
+}
+
+let wcDragSrc = null;
+function wcDragStart(e, el) {
+  wcDragSrc = el;
+  el.classList.add('dragging');
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/plain', '');
+}
+function wcDragOver(e, el) {
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  document.querySelectorAll('.wc').forEach(c => c.classList.remove('drag-over'));
+  if (el !== wcDragSrc) el.classList.add('drag-over');
+}
+function wcDrop(e, el) {
+  e.preventDefault();
+  if (!wcDragSrc || el === wcDragSrc) return;
+  const grid = el.parentNode;
+  const cards = [...grid.querySelectorAll('.wc')];
+  const srcIdx = cards.indexOf(wcDragSrc);
+  const tgtIdx = cards.indexOf(el);
+  if (srcIdx < tgtIdx) grid.insertBefore(wcDragSrc, el.nextSibling);
+  else grid.insertBefore(wcDragSrc, el);
+  el.classList.remove('drag-over');
+}
+function wcDragEnd(e) {
+  document.querySelectorAll('.wc').forEach(c => {
+    c.classList.remove('dragging', 'drag-over');
+  });
+  wcDragSrc = null;
+}
 
 function initCompLib(){
   if(clInited)return;clInited=true;
   Object.entries(COMPS).forEach(([sec,comps])=>{
     const grid=document.getElementById('grid-'+sec);if(!grid)return;
+    const isWC = sec==='widgetcards';
     comps.forEach(comp=>{
-      const card=document.createElement('div');card.className='comp-card';
-      card.innerHTML=`<div class="comp-card-preview">${comp.html}</div><div class="comp-card-meta"><span class="comp-card-name">${comp.name}</span><span class="comp-card-tag">${comp.tag}</span></div><div class="comp-card-actions"><button class="comp-action-btn primary" onclick="openModal('${comp.id}','${sec}')">View &amp; Copy</button><button class="comp-action-btn" onclick="quickCopy('${comp.id}','${sec}',this)">Copy HTML</button></div>`;
-      grid.appendChild(card);
+      if(isWC){
+        // Widget cards render their own full HTML directly
+        const wrapper=document.createElement('div');
+        wrapper.innerHTML=comp.html;
+        const el=wrapper.firstElementChild;
+        if(el) grid.appendChild(el);
+      } else {
+        const card=document.createElement('div');card.className='comp-card';
+        card.innerHTML=`<div class="comp-card-preview">${comp.html}</div><div class="comp-card-meta"><span class="comp-card-name">${comp.name}</span><span class="comp-card-tag">${comp.tag}</span></div><div class="comp-card-actions"><button class="comp-action-btn primary" onclick="openModal('${comp.id}','${sec}')">View &amp; Copy</button><button class="comp-action-btn" onclick="quickCopy('${comp.id}','${sec}',this)">Copy HTML</button></div>`;
+        grid.appendChild(card);
+      }
     });
   });
 }
@@ -1399,6 +1992,9 @@ function copyResult(){navigator.clipboard.writeText(document.getElementById('tc-
 // INIT
 // ═══════════════════════════════════════════
 document.addEventListener('DOMContentLoaded',()=>{
+  // Handle initial URL hash for direct deep links
+  const initHash = location.hash.replace('#','').split('/')[0];
+  if(initHash && TOOL_META[initHash]) { navTo(initHash); } else { updateMeta('home'); }
   initGradient();
   // Init animations keyframes
   const st=document.createElement('style');
