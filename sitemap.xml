@@ -1,212 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="#sitemap-xsl"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- ═══════════════════════════════════════
-       HOME
-  ════════════════════════════════════════ -->
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="
+          http://www.sitemaps.org/schemas/sitemap/0.9
+          http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+          http://www.google.com/schemas/sitemap-image/1.1
+          http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+ 
+  <!-- ═══════════════════════════════════════════
+       UIForge — XML Sitemap
+       https://uiforge.dev/sitemap.xml
+       Generated: 2025-03-20
+       Tools: 16 | Pages: 17 total
+  ═══════════════════════════════════════════ -->
+ 
+  <!-- HOME / LANDING PAGE -->
   <url>
     <loc>https://uiforge.dev/</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://uiforge.dev/og-image.png</image:loc>
+      <image:title>UIForge — 16 Free CSS Tools with CSS, Tailwind and React Output</image:title>
+      <image:caption>UIForge CSS generator suite showing tri-format output panel with 16 free tools</image:caption>
+    </image:image>
   </url>
-
-  <!-- ═══════════════════════════════════════
-       CSS GENERATOR TOOLS (01–16)
-  ════════════════════════════════════════ -->
+ 
+  <!-- TOOL 01: CSS Gradient Generator -->
   <url>
     <loc>https://uiforge.dev/#gradient</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+ 
+  <!-- TOOL 02: Box Shadow Builder -->
   <url>
     <loc>https://uiforge.dev/#shadow</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+ 
+  <!-- TOOL 03: Border Radius Tool -->
   <url>
     <loc>https://uiforge.dev/#border</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
+ 
+  <!-- TOOL 04: CSS Clamp Calculator -->
   <url>
     <loc>https://uiforge.dev/#clamp</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+ 
+  <!-- TOOL 05: Glassmorphism Generator -->
   <url>
     <loc>https://uiforge.dev/#glass</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+ 
+  <!-- TOOL 06: Flexbox Playground -->
   <url>
     <loc>https://uiforge.dev/#flexbox</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+ 
+  <!-- TOOL 07: CSS Grid Builder -->
   <url>
     <loc>https://uiforge.dev/#grid</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+ 
+  <!-- TOOL 08: CSS Animation Generator -->
   <url>
     <loc>https://uiforge.dev/#cssanim</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+ 
+  <!-- TOOL 09: CSS Transform Builder -->
   <url>
     <loc>https://uiforge.dev/#transform</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+ 
+  <!-- TOOL 10: Clip-path Maker -->
   <url>
     <loc>https://uiforge.dev/#clippath</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+ 
+  <!-- TOOL 11: SVG Blob Generator -->
   <url>
     <loc>https://uiforge.dev/#blob</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+ 
+  <!-- TOOL 12: Color Palette Generator -->
   <url>
     <loc>https://uiforge.dev/#palette</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+ 
+  <!-- TOOL 13: HEX to RGB Converter -->
   <url>
     <loc>https://uiforge.dev/#hexrgb</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+ 
+  <!-- TOOL 14: WCAG Contrast Checker -->
   <url>
     <loc>https://uiforge.dev/#contrast</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
+ 
+  <!-- TOOL 15: Unix Timestamp Converter -->
   <url>
     <loc>https://uiforge.dev/#timestamp</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+ 
+  <!-- TOOL 16: Text Case Converter -->
   <url>
     <loc>https://uiforge.dev/#textcase</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- ═══════════════════════════════════════
-       COMPONENT LIBRARY (17) + CATEGORIES
-  ════════════════════════════════════════ -->
-  <url>
-    <loc>https://uiforge.dev/#complib</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/buttons</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/badges</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/cards</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/inputs</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/alerts</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/toggles</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/avatars</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/navigation</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/data</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/misc</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/modal</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/table</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/feed</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://uiforge.dev/#complib/marketing</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
+ 
 </urlset>
