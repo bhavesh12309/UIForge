@@ -1,31 +1,68 @@
+# ═══════════════════════════════════════════
+# UIForge — robots.txt
+# https://uiforge.dev/robots.txt
+# ═══════════════════════════════════════════
+
+# Allow all crawlers full access
 User-agent: *
 Allow: /
 
-# Tool pages
-Allow: /css-gradient-generator
-Allow: /box-shadow-generator
-Allow: /border-radius-generator
-Allow: /flexbox-playground
-Allow: /css-grid-generator
-Allow: /color-palette-generator
-Allow: /hex-rgb-converter
-Allow: /contrast-checker
-Allow: /timestamp-converter
-Allow: /text-case-converter
-Allow: /css-animation-generator
-Allow: /css-clamp-generator
-Allow: /css-transform-generator
-Allow: /svg-blob-generator
-Allow: /glassmorphism-generator
-Allow: /css-clip-path-generator
+# Disallow any future admin or API paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_/
 
-# Company pages
-Allow: /about
-Allow: /contact
-Allow: /privacy
-Allow: /terms
-Allow: /blog
-User-agent: *
+# Crawl-delay for polite bots
+Crawl-delay: 1
+
+# ─── Google ───
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 0
+
+# ─── Bing ───
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# ─── Other major crawlers ───
+User-agent: Slurp
 Allow: /
 
-Sitemap: https://bhavesh12309.github.io/UIForge/sitemap.xml
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# ─── Block known bad bots ───
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ─── Sitemap ───
+Sitemap: https://uiforge.dev/sitemap.xml
